@@ -658,8 +658,8 @@
 /* — Instagram: gradient badge with white glyph — */
 .hero-icons .ig {
   
-  color: #fff;                     /* white icon on gradient */
-  box-shadow: 0 6px 18px rgba(150,47,191,.35);
+  color:#c83ec1;                     /* white icon on gradient */
+  
 }
 
 /* Optional: hover pop */
