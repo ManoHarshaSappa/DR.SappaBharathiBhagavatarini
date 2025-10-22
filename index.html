@@ -10,8 +10,17 @@
   <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 
-</head>
 
+  <!-- PDF.js from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@4.5.136/build/pdf.min.js"></script>
+  <script>
+    pdfjsLib.GlobalWorkerOptions.workerSrc =
+      "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.5.136/build/pdf.worker.min.js";
+  </script>
+  
+
+
+</head>
 
 
 
@@ -2483,17 +2492,17 @@
           <ul class="link-list">
             
             <li>
-              <!-- Option A: <object> (best for built-in PDF viewers) -->
-              <object
-                data="Awards & Publications/Journals Published-ENG.docx.pdf"   
-                type="application/pdf"
-                style="width:100%; height:85vh; border:0;">
-                <!-- Fallback if PDF cannot render -->
-                <p>
-                  This PDF can’t be displayed in your browser.
-                  <a href="Awards & Publications/Journals Published-ENG.docx.pdf" download>Download the PDF</a>
-                </p>
-              </object>
+              <!-- Desktop/Laptop viewer (unchanged) -->
+              <div class="pdf-wrap">
+                <object
+                  data="Awards & Publications/Journals Published-ENG.docx.pdf#view=FitH&zoom=page-width"
+                  type="application/pdf">
+                  <p>This PDF can’t be displayed. <a href="Awards & Publications/Journals Published-ENG.docx.pdf" download>Download</a></p>
+                </object>
+              </div>
+            
+              <!-- Mobile viewer (PDF.js will fill this) -->
+              <div class="pdf-view" data-pdf="Awards & Publications/Journals Published-ENG.docx.pdf"></div>
             </li>
 
 
@@ -2513,17 +2522,15 @@
           <ul>
 
             <li>
-              <!-- Option A: <object> (best for built-in PDF viewers) -->
-              <object
-                data="Awards & Publications/Certificates of AppreciationENG.pdf"   
-                type="application/pdf"
-                style="width:100%; height:85vh; border:0;">
-                <!-- Fallback if PDF cannot render -->
-                <p>
-                  This PDF can’t be displayed in your browser.
-                  <a href="Awards & Publications/Certificates of AppreciationENG.pdf" download>Download the PDF</a>
-                </p>
-              </object>
+              <div class="pdf-wrap">
+                <object
+                  data="Awards & Publications/Certificates of AppreciationENG.pdf#view=FitH&zoom=page-width"
+                  type="application/pdf">
+                  <p>This PDF can’t be displayed. <a href="Awards & Publications/Certificates of AppreciationENG.pdf" download>Download</a></p>
+                </object>
+              </div>
+            
+              <div class="pdf-view" data-pdf="Awards & Publications/Certificates of AppreciationENG.pdf"></div>
             </li>
 
 
