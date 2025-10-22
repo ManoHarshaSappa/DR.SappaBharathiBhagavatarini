@@ -405,6 +405,11 @@
 
 
 
+html { scroll-behavior: smooth; }
+
+/* Make sections stop *below* your sticky header on mobile too */
+:root { --sticky-offset: calc(var(--topbar-h, 64px) + var(--content-gap, 8px) + 6px); }
+[role="tabpanel"], .subpanel-group, .subpanel { scroll-margin-top: var(--sticky-offset); }
 
 
 
