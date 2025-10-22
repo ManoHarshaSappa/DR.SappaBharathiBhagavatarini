@@ -1,0 +1,2676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Top Dock with Name Label</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+</head>
+
+
+
+
+
+
+<body>
+
+  
+
+  <!-- subtle grain -->
+  <svg class="bg-noise" aria-hidden="true">
+    <filter id="noiseFilter">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="4" seed="7"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+    <rect x="0" y="0" width="100%" height="100%" filter="url(#noiseFilter)" opacity="0.18"></rect>
+  </svg>
+  <div class="bg-overlay" aria-hidden="true"></div>
+
+  <!-- FIXED TOP BAR --><header class="topbar" role="banner">
+  <div class="topbar-inner">
+    <!-- dock -->
+    <nav id="dock" class="dock" role="tablist" aria-label="Top dock">
+      <button class="dock-btn active" role="tab" aria-selected="true"
+              aria-controls="panel-about" data-panel="panel-about" data-title="About">
+        <span class="icon"><i class="fa-solid fa-user"></i></span>
+        <span class="sr">About</span>
+      </button>
+
+      <button class="dock-btn" role="tab" aria-selected="false"
+              aria-controls="panel-harikatha" data-panel="panel-harikatha" data-title="Sangeetha Vibhagamulu (Music Divisions)">
+        <span class="icon"><i class="fa-solid fa-music"></i></span>
+        <span class="sr">Sangeetha Vibhagamulu (Music Divisions)</span>
+      </button>
+
+      <button class="dock-btn" role="tab" aria-selected="false"
+              aria-controls="panel-music" data-panel="panel-music" data-title="Pramukhalu ">
+        <span class="icon"><i class="fa-solid fa-landmark"></i></span>
+        <span class="sr">Pramukhalu</span>
+      </button>
+
+      <button class="dock-btn" role="tab" aria-selected="false"
+              aria-controls="panel-cinema" data-panel="panel-cinema" data-title="Film Artists & Directors">
+        <span class="icon"><i class="fa-solid fa-film"></i></span>
+        <span class="sr">Film Artists & Directors</span>
+      </button>
+
+      <button class="dock-btn" role="tab" aria-selected="false"
+              aria-controls="panel-awards" data-panel="panel-awards" data-title="Awards & Publications">
+        <span class="icon"><i class="fa-solid fa-trophy"></i></span>
+        <span class="sr">Awards & Publications</span>
+      </button>
+
+      <button class="dock-btn" role="tab" aria-selected="false"
+              aria-controls="panel-media" data-panel="panel-media" data-title="Media & Outreach">
+        <span class="icon"><i class="fa-solid fa-globe"></i></span>
+        <span class="sr">Media & Outreach</span>
+      </button>
+
+      <!-- label pill -->
+      <div id="tabLabel" class="tab-label" aria-hidden="true"></div>
+    </nav>
+
+    <!-- hamburger -->
+    <button id="menuToggle" class="icon-btn" aria-label="Open menu" aria-expanded="false">
+      <svg class="icon-bars" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <svg class="icon-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4l16 16M20 4L4 20"/></svg>
+    </button>
+  </div>
+</header>
+
+
+
+
+
+  <!-- slide menu -->
+  <aside id="mobileMenu" class="mobile-menu" aria-hidden="true">
+    <ul>
+      <li data-panel="panel-about">About</li>
+      <li data-panel="panel-harikatha">Sangeetha Vibhagamulu (Music Divisions)</li>
+      <li data-panel="panel-music">Pramukhalu</li>
+      <li data-panel="panel-cinema">Film Artists &amp; Directors</li>
+      <li data-panel="panel-awards">Awards &amp; Publications</li>
+      <li data-panel="panel-media">Media &amp; Outreach</li>
+    </ul>
+  </aside>
+
+
+
+
+  <main class="panels">
+    <!-- 1) About --><section id="panel-about" role="tabpanel">
+  <h2>DR. Sappa Bharathi Bhagavatarini</h2>
+
+
+
+
+
+
+  <!-- (Optional) About subtab header -->
+ 
+
+
+
+  
+
+  <!-- Sticky Language Toggle -->
+  <div class="lang-toggle">
+    <button id="btn-en" class="lang-btn active">English</button>
+    <button id="btn-te" class="lang-btn">తెలుగు</button>
+  </div>
+
+<div class="lang-content">
+
+  <!-- ================= ENGLISH VERSION ================= -->
+  <div id="lang-en" class="lang-panel" style="display: block;">
+    <div class="subpanel-group">
+
+      <div id="about-info-en" class="subpanel">
+
+        <!-- TOP CARD -->
+        <div class="about-hero">
+          <div class="hero-text">
+            <div class="rank"><strong style="color: gold;">A-TOP GRADE ARTIST</strong></div>
+
+            <p class="addr">7-20/A 2nd house, S M R Nagar 1st Road, Eluru</p>
+            <p class="phones">+91 98483 78407 / +91 97041 79407</p>
+
+            <div class="hero-icons">
+              <a class="icon yt" href="https://www.youtube.com/@SappaBharathiBhagavatarini" target="_blank" rel="noopener" aria-label="YouTube">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+              <a class="icon fb" href="https://www.facebook.com/profile.php?id=100008436812038" target="_blank" rel="noopener" aria-label="Facebook">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+              <a class="icon ig" href="https://www.instagram.com/sappa_bharathi/" target="_blank" rel="noopener" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a class="icon mail" href="mailto:sappabharathi@gmail.com" aria-label="Email">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+            </div>
+            
+            
+          </div>
+
+          <figure class="hero-photo">
+            <img src="About/info/profile pic.png" alt="Sappa Bharathi portrait">
+            <figcaption>SAPPA BHARATHI</figcaption>
+          </figure>
+        </div>
+
+        <!-- EVERYTHING ELSE IN ONE BLOCK -->
+        <div class="info-matter">
+
+          <!-- Introduction -->
+          <h3 class="about-title">Introduction</h3>
+
+          <p class="intro-text">
+            My name is <strong style="color: gold;">Dr. Sappa Bharathi Bhagavatarini</strong>. I belong to Eluru District, Eluru, Andhra Pradesh.
+            I am a Harikatha performer and have conducted Harikatha performances in various states and regions, totaling
+            over <strong style="color: gold;">5000</strong> presentations.
+            I received an <strong style="color: gold;">‘A-Top’ Grade</strong>
+            <!-- Badge button (click to open) -->
+            <button class="a-top-badge emoji-badge"
+                    type="button"
+                    aria-label="‘A-Top’ Grade certificate"
+                    title="‘A-Top’ Grade certificate">
+              <span class="emoji" aria-hidden="true">📜</span>
+            </button>
+            (highest grade) on <strong style="color: gold;">08-06-2012</strong> at the All India Radio, Vijayawada Center.
+          </p>
+
+          <!-- Popup overlay (your JS adds/removes .show) -->
+          <div id="aTopOverlay" class="a-top-overlay" role="dialog" aria-modal="true" aria-labelledby="aTopTitle" aria-hidden="true">
+            <div class="a-top-popup" role="document">
+              <button class="a-top-close" type="button" aria-label="Close">×</button>
+
+              <!-- Certificate image -->
+              <img src="About/A-top.png" alt="A-Top certificate" class="a-top-certificate">
+
+              <h4 id="aTopTitle" class="a-top-heading">
+                <!-- keep/readthedocs.svg only if you want the small icon; safe to remove -->
+                <img src="About/readthedocs.svg" alt="" class="a-top-devicon-svg a-top-titleicon">
+                ‘A-Top’ Grade – All India Radio
+              </h4>
+              <p>Vijayawada Centre • 08-06-2012</p>
+            </div>
+          </div>
+
+          <!-- Popup JS -->
+          <script>
+            (function () {
+              const trigger  = document.querySelector('.a-top-badge');      // the emoji button
+              const overlay  = document.getElementById('aTopOverlay');      // the modal overlay
+              const closeBtn = overlay ? overlay.querySelector('.a-top-close') : null;
+
+              let hideTimer = null;
+
+              function showPopup() {
+                if (!overlay) return;
+                overlay.classList.add('show');
+                overlay.setAttribute('aria-hidden', 'false');
+                clearTimeout(hideTimer);
+                hideTimer = setTimeout(hidePopup, 5000);                    // auto-close after 5s
+                if (closeBtn) closeBtn.focus();
+              }
+
+              function hidePopup() {
+                if (!overlay) return;
+                overlay.classList.remove('show');
+                overlay.setAttribute('aria-hidden', 'true');
+                clearTimeout(hideTimer);
+                if (trigger) trigger.focus();
+              }
+
+              // open on badge click
+              if (trigger) trigger.addEventListener('click', showPopup);
+
+              // close on × click
+              if (closeBtn) closeBtn.addEventListener('click', hidePopup);
+
+              // close when clicking outside the card
+              if (overlay) {
+                overlay.addEventListener('click', (e) => {
+                  if (e.target === overlay) hidePopup();
+                });
+              }
+
+              // close on Escape
+              document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && overlay && overlay.classList.contains('show')) {
+                  hidePopup();
+                }
+              });
+            })();
+          </script>
+
+          <p>
+            Some of the Harikathas I narrate include the complete <em>Shri Yadartha Ramayana</em>, the 18 <em>parvas</em> of
+            the <em>Shri Mahabharata</em>, the life story of
+            <em>Shri Masvirat Potuluri Virabrahmendra Swami Kalajnana Sahita Sampurna Jivita Charitra</em>,
+            <em>Bhakta Ambarisha</em>, the <em>Shri Venkatachala Vaibhavam</em>, the
+            <em>Shri Valli Subrahmanyeswara Swami Vari Kalyanam</em>, the <em>Shiva Leelalu</em>, the
+            <em>Girija Kalyanam</em>, and the <em>Shri Shirdi Sai Baba Jivita Charitra</em>.
+          </p>
+
+          <!-- Parents -->
+          <h3 class="about-title" style="text-align:center">Parents</h3>
+          <p>
+            My parents, <strong style="color: gold;">Mrs. Balam Nagamani Bhagavatarini</strong> and
+            <strong style="color: gold;">Mr. Balam Suryachandra Rao Bhagavatarulu</strong>,
+            are both accomplished Harikatha artists. My father is a retired police officer and holds a
+            <strong>Harikatha Art Diploma</strong> from Sri Potti Sriramulu Telugu University, Hyderabad.
+          </p>
+          <div class="two-images-mobile">
+            <img src="About/info/mom.png" alt="Mrs. Balam Nagamani Bhagavatarini">
+            <img src="About/info/dad.png" alt="Mr. Balam Suryachandra Rao Bhagavatarulu">
+          </div>
+
+          <!-- Education -->
+          <h3 class="about-title">Education</h3>
+          <p>
+            I started my education from first grade and continued till seventh grade at
+            <strong>Tanuku, Medabadi School</strong>. Later, I pursued my studies at a girls' school
+            up to the eighth grade. After that, I joined the
+            <strong>Sri Sarvaraya Harikatha Pathasala</strong> in Kapileshwaram, West Godavari District,
+            under the administration of the late Rajamahendravaram former Central Ministers, the late
+            <strong>Balusu Prabhakar</strong> and <strong>Mrs. Rajarajeshwaramma</strong>.
+          </p>
+          <p>
+            I completed my 12th class at the <strong>Sri Sarvaraya Harikatha Gurukul Kala Shala</strong>.
+            During my time there, I studied Harikatha for <strong>6 years</strong>. Later, I completed my
+            <strong>Bachelor of Arts (B.A.)</strong> at Andhra University, Visakhapatnam, and my
+            <strong>Master of Arts (M.A.) in Telugu</strong> at Sri Venkateswara University, Tirupati.
+          </p>
+          <div class="info-image">
+            <img src="About/info/1-10.png" alt="Education photo">
+          </div>
+
+          <!-- Teachers -->
+          <h3 class="about-title">Teachers Who Taught Me</h3>
+          <div class="teacher-inline">
+            <p><strong style="color: gold;">Music:</strong> Trained by Brahmashree Mahendrawada Kameswara Rao Garu.</p>
+            <p><strong style="color: gold;">Sanskrit:</strong> I studied under Sriman Angara Singaracharyu Garu.</p>
+            <p><strong style="color: gold;">Telugu:</strong> I trained under Sri Medini Satyanarayana and Kumari Pappu Satyavathy Garu.</p>
+            <p><strong style="color: gold;">Dance:</strong> I studied under Shri Kala Krishna Garu, Kumari Badampudi Lakshmi Garu, Brahmashri Pasumarthi Srinivasa Sharma Garu.</p>
+            <p><strong style="color: gold;">Rhythm:</strong> I practiced under Shri Vakkalagadda Ngeswara Rao Garu.</p>
+            <p><strong style="color: gold;">Harikathas:</strong> I trained under Brahmashri Akka Peddi Srirama Sharma Bhagavathulu Garu, Brahmashri Tanuku Viswanatham Bhagavathulu Garu,
+              Sri Ganta Gopalao Bhagavathulu Garu, Smt Uma Chaudhary Bhagavatarini Garu, Sri Pulugu Veeraya Bhagavathulu Garu.</p>
+            <p><strong style="color: gold;">Sanskrit:</strong> I studied under Shriman Nallan Chakravartula Krishnamacharyu Garu.</p>
+          </div>
+
+            <!-- Career Journey -->
+            <h3 class="about-title">My Career Journey</h3>
+            <p>
+              I have been receiving education in Harikatha (a traditional form of storytelling and music)
+              since the age of 12. I have garnered significant praise for my performances in Harikatha
+              presentations, with notable recognition at the Vijayanagaram –
+              <strong>Shri Mad Ajjada Adibhatla Narayanadasu Garu's</strong> worship festivals. My parents,
+              who are both accomplished in the field of Harikatha, guided me and paved the way for my success.
+              I have excelled in my studies under the tutelage of revered gurus and have been actively involved
+              in numerous Harikatha performances.
+            </p>
+            <p>
+              I hold the distinction of being the first to don the prestigious <strong>Rajita Kankanam</strong>
+              (a symbol of honor) in the Harikatha presentations conducted at the
+              <strong>Sri Sarvaraya Harikatha Pathashala</strong>, where I received my education. I have performed
+              Harikatha songs not only in Telugu but also in Sanskrit, showcasing my unique versatility.
+            </p>
+            <p>
+              Some of the prominent regions where I have delivered significant Harikatha performances include
+              <strong>Haryana</strong> (at the World Telugu Conferences in Andhra Bhavan, New Delhi in 1998),
+              <strong>Orissa</strong> (at the Telugu Literary Conferences in Bhubaneswar and Berhampur),
+              <strong>West Bengal</strong> (at the Shri Veerabrahmendra Swami Varu's Worship Festival Committee in Kharagpur),
+              <strong>Karnataka</strong> (at the Telugu Literary Conferences in Bengaluru and Ballari),
+              <strong>Tamil Nadu</strong> (at the Music Academy in Chennai and TTD Kalyana Mandapam in Mel-Tour),
+              and <strong>Madhya Pradesh</strong> (at the Kalidasa Academy in Ujjain and Kashi Mumukshu Bhavan in Varanasi).
+            </p>
+
+            <!-- Places -->
+            <h3 class="about-title">Andhra Pradesh</h3>
+            <p>
+              Tirumala Nadaneerajanam, Sri Venkateswara Bhakti Channel, Sri Alivelu Mangapuram, Nagalapuram, Kanipakam,
+              Srisailam, Srimadvirat Potuluri Veerabrahmendra Swami Devasthanam, Brahmamgari Matham, Vijayawada – Sri Indrakiladi
+              Kanakadurgamma Devasthanam, Dwarakatirumala – Sri Venkateswara Swami Vaari Devasthanam, Bhimavaram – Sri Mavullamma
+              Talli Devasthanam, Annavaram – Sri Satyanarayana Swami Vaari Devasthanam, Rajamahendravaram – Ganga Harathi,
+              Koti Lingala Revu, Anand Kala Kendram, Kakinda – Surya Kala Mandiram, Pancharama Kshetras, Visakhapatnam – Kalabharati,
+              Sri Kakulam – Bapuji Kala Mandir, Bejjiputtuga – Sri Chakradhara Dolotsavam, Anakapalli – Sri Nukambika Ammavari
+              Devasthanam, Sri Gowri Panchayatana Devalaya Mandapam – Shravanamasam Nela Rojulu, Sri Kamakshi Devastha Devasthanam.
+            </p>
+
+            <h3 class="about-title">Telangana</h3>
+            <p>
+              Hyderabad – Ravindra Bharati, Tyagaraya Gana Sabha, Shankar Math, Vemulawada – Sri Rajarajeshwara Swami Vaari
+              Devasthanam, Yadagirigutta – Sri Lakshminarasimha Swami Vaari Devasthanam, Sirisilla, Suryapet – Sri Vedanta Bhajana
+              Mandiram, Palvancha, Khammam – TTDC Kalyana Mandapam.
+            </p>
+
+            <h3 class="about-title">Awards</h3>
+            <p>
+              1. <strong style="color: gold;">National Bangaru Nandi Award</strong> – 2023, G.C.S Valluri Foundation, Telangana Government, Department of Language and Culture, held on 17th September at Ravindra Bharati, Hyderabad.<br>
+              2. <strong style="color: gold;">Honoris Doctorate</strong> – 2023, International Peace University, Pondicherry.<br>
+              3. <strong style="color: gold;">Bharat Kala Ratna Award</strong> – 2023, International Peace Council, Pondicherry.<br>
+              4. <strong style="color: gold;">Swarna Kankana Gana Sanmana</strong> – 2010, Mrs. A. Vani Prasad, District Collector, West Godavari, Sri Garikapati Arts Theaters, Eluru.<br>
+              5. <strong style="color: gold;">Rajitha Kirita Dhara</strong> – 2019, Sri Garikapati Arts Theaters, Eluru.<br>
+              6. <strong style="color: gold;">Suvarna Hastha Kankana Gana Sanmanam</strong> – 2023, Parliament Members Dr. Bheesetti Venkata Satyavati, Sri Gauri Seva Sangham, held at Sri Gauri Parameshwari Ammavari Devasthanam, Anakapalli.<br>
+              7. <strong style="color: gold;">Harikatha Ratna Main Award</strong> – 2023, B.V.R. Kalakendram, Tadepalligudem.<br>
+              8. <strong style="color: gold;">Harikatha Saraswati Main Award</strong> – 2023, Sri Mad Ajjada Adibhatla Narayana Das disciple fraternity, Vijayawada.<br>
+              9. <strong style="color: gold;">Harikatha Chudamani Main Award</strong> – Sri Mad Ajjada Adibhatla Narayana Das Seva Samiti, Vizianagaram.<br>
+              10. <strong style="color: gold;">First Bahumati</strong> – 1998, Sri Mad Ajjada Adibhatla Narayana Dasu’s Anniversary Celebrations, Vizianagaram.<br>
+              11. <strong style="color: gold;">Sri Swami Vivekananda Excellence Award</strong> – 2018, Youth Kalavahini and Sharada Kalasamiti, Vijayawada.<br>
+              12. <strong style="color: gold;">Linka Book Award</strong> – 2015, Visakhapatnam.<br>
+              13. <strong style="color: gold;">Harikatha Gaana Prapurna Main Award</strong> – March 2020, Aksharam Arts, V.M.H.A. Hall, Eluru.<br>
+              14. <strong style="color: gold;">Ujjaini Kalidasa Academy Award</strong> – for contribution to the Sundarakanda in Sanskrit Harikatha Gaanam, honored by Sree Sarvaraya Committee, Pithapuram.<br>
+              15. <strong style="color: gold;">Harikatha Gaan Praveena Main Award</strong> – Srihari Yajna Seva Samiti, Indupalli.<br>
+              16. <strong style="color: gold;">Sri Sarvaraya Harikatha Pathashala Award</strong> – Kapileshwarapuram, awarded the first Bahumati for the organizers.<br>
+              17. <strong style="color: gold;">Anargala Kanthamrutam Award</strong> – Sri Veerabrahmam Committee, Pithapuram.<br>
+              18. <strong style="color: gold;">Harikatha Bharati Main Award</strong> – Sri Kaivalyananda Saraswati Swami of Sri Bhur Shivarāmakrishna Sharma Bhagavatulu, Vijayawada.<br>
+              19. <strong style="color: gold;">Natya Mayuri Main Award</strong> – Sri Narasimha Swami Jayanthotsavas, Mell Tour.<br>
+              20. <strong style="color: gold;">Swarna Kokila</strong> – 2022, Sri Gauri Panchayatana Devalaya Mandapam, Gavara Palem, Anakapalli.<br>
+              21. <strong style="color: gold;">Sakala Kalabharati</strong> – 2021, Sri Gauri Parameshwari Devasthanam, Anakapalli.<br>
+              22. <strong style="color: gold;">Aatmiyata Satkara Sanmana Patram</strong> – Sri Sri Rama Raksha Seva Sangham, Malavya Nagar, Guduru, presented on the 14th Jayawara Satsanga Bhajan Annual Festival.
+            </p>
+
+          </div><!-- /info-matter -->
+        </div><!-- /subpanel -->
+      </div><!-- /subpanel-group -->
+    </div><!-- /lang-en -->
+
+    <!-- ================= TELUGU VERSION ================= -->
+    <div id="lang-te" class="lang-panel" style="display: none;">
+      <div class="subpanel-group">
+        <div id="about-info-te" class="subpanel">
+
+          <!-- TOP CARD -->
+          <div class="about-hero">
+            <div class="hero-text">
+              <div class="rank"><strong style="color: gold;">A-TOP GRADE ARTIST</strong></div>
+
+              <p class="addr">7-20/A 2nd house, S M R Nagar 1st Road, Eluru</p>
+              <p class="phones">+91 98483 78407 / +91 97041 79407</p>
+
+              <div class="hero-icons">
+                <a href="https://www.youtube.com/@SappaBharathiBhagavatarini" target="_blank" rel="noopener" aria-label="YouTube">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100008436812038" target="_blank" rel="noopener" aria-label="Facebook">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="mailto:sappabharathi@gmail.com" aria-label="Email">
+                  <i class="fa-solid fa-envelope"></i>
+                </a>
+              </div>
+            </div>
+
+            <figure class="hero-photo">
+              <img src="About/info/profile pic.png" alt="Sappa Bharathi portrait">
+              <figcaption>SAPPA BHARATHI</figcaption>
+            </figure>
+          </div>
+
+          <!-- EVERYTHING ELSE IN ONE BLOCK -->
+          <div class="info-matter">
+
+<!-- పరిచయం (Telugu) -->
+<h3 class="about-title">పరిచయం</h3>
+
+<p class="intro-text">
+  నా పేరు <strong style="color: gold;">Dr. Sappa Bharathi Bhagavatarini</strong>.
+  నేను ఏలూరు జిల్లా, ఏలూరు వాసిని. నేను హరికథ కళాకారిణిని మరియు
+  వివిధ రాష్ట్రాలు, ప్రాంతాలలో కలిపి
+  <strong style="color: gold;">5000కి పైగా</strong> హరికథ ప్రదర్శనలు ఇచ్చాను.
+  ప్రసార భారతీ – ఆల్ ఇండియా రేడియో, విజయవాడ కేంద్రంలో
+  <strong style="color: gold;">08-06-2012</strong> తేదీన
+  <strong style="color: gold;">‘ఏ-టాప్’ గ్రేడ్ (A-Top Grade)</strong>
+  <!-- Badge button (click to open certificate popup) -->
+  <button class="a-top-badge emoji-badge"
+          type="button"
+          aria-label="‘A-Top’ Grade certificate"
+          title="‘A-Top’ Grade certificate">
+    <span class="emoji" aria-hidden="true">📜</span>
+  </button>
+  (అత్యున్నత గ్రేడ్) అందుకున్నాను.
+</p>
+
+<!-- Popup overlay (JS toggles .show) -->
+<div id="aTopOverlay" class="a-top-overlay" role="dialog" aria-modal="true"
+     aria-labelledby="aTopTitle" aria-hidden="true">
+  <div class="a-top-popup" role="document">
+    <button class="a-top-close" type="button" aria-label="Close">×</button>
+
+    <!-- Certificate pic -->
+    <img src="About/A-top.png" alt="A-Top certificate" class="a-top-certificate">
+
+    <h4 id="aTopTitle" class="a-top-heading">
+      <!-- small icon pic (same as English block) -->
+      <img src="About/readthedocs.svg" alt="" class="a-top-devicon-svg a-top-titleicon">
+      ‘A-టాప్’ గ్రేడ్ – All India Radio
+    </h4>
+    <p>Vijayawాడా Centre • 08-06-2012</p>
+  </div>
+</div>
+
+<script>
+  (() => {
+    const AUTO_CLOSE_MS = 5000; // set to 0 to disable auto-close
+  
+    function findOverlayFor(btn){
+      // Prefer the nearest .a-top-overlay within the same section/block
+      const scope = btn.closest('.info-matter') || document;
+      let ov = scope.querySelector('.a-top-overlay');
+      // Fallback: next sibling overlay after the button's paragraph
+      if(!ov){
+        const p = btn.closest('p');
+        if (p && p.nextElementSibling && p.nextElementSibling.classList.contains('a-top-overlay')) {
+          ov = p.nextElementSibling;
+        }
+      }
+      return ov;
+    }
+  
+    function wireOne(btn){
+      const overlay = findOverlayFor(btn);
+      if(!overlay) return;
+  
+      const closeBtn = overlay.querySelector('.a-top-close');
+      let timer = null;
+  
+      const open = () => {
+        overlay.classList.add('show');
+        overlay.setAttribute('aria-hidden','false');
+        if (AUTO_CLOSE_MS > 0){
+          clearTimeout(timer);
+          timer = setTimeout(close, AUTO_CLOSE_MS);
+        }
+        if (closeBtn) closeBtn.focus();
+      };
+  
+      const close = () => {
+        overlay.classList.remove('show');
+        overlay.setAttribute('aria-hidden','true');
+        clearTimeout(timer);
+        btn.focus();
+      };
+  
+      btn.addEventListener('click', open);
+      if (closeBtn) closeBtn.addEventListener('click', close);
+  
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) close();
+      });
+  
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && overlay.classList.contains('show')) close();
+      });
+    }
+  
+    // Wire all badge buttons on the page
+    document.querySelectorAll('.a-top-badge').forEach(wireOne);
+  })();
+  </script>
+  
+
+
+
+
+
+<p>
+  నేను చెప్పే హరికథలు:
+  <em>శ్రీ యధార్థ రామాయణం (సంపూర్ణం)</em>,
+  <em>శ్రీ మహాభారతం</em> 18 పర్వాలు,
+  <em>శ్రీమద్ విరాట్ పోతులూరి వీరబ్రహ్మేంద్ర స్వామి కాలజ్ఞాన సహిత సంపూర్ణ జీవిత చరిత్ర</em>,
+  <em>భక్త అంబరీష</em>,
+  <em>శ్రీ వెంకటాచల వైభవం</em>,
+  <em>శ్రీ వల్లి సుబ్రహ్మణ్యేశ్వర స్వామి వారి కళ్యాణం</em>,
+  <em>శివ లీలలు</em>,
+  <em>గిరిజా కళ్యాణం</em>,
+  <em>శ్రీ శిరిడీ సాయి బాబా జీవిత చరిత్ర</em> మొదలైనవి.
+</p>
+
+
+
+
+
+
+
+            <h3 class="about-title" style="text-align:center">తల్లిదండ్రులు</h3>
+            <p>
+              నాకు జన్మనిచ్చిన తల్లిదండ్రులు
+              <strong style="color: gold;">శ్రీమతి బాలం నాగమణి భాగవతారిణి</strong>,
+              <strong style="color: gold;">శ్రీ బాలం సూర్యచంద్రరావు భాగవతులు</strong>
+              (శ్రీ పొట్టి శ్రీరాములు తెలుగు విశ్వవిద్యాలయం, హైదరాబాద్ – హరికథ డిప్లమో ఆర్టిస్ట్)
+              మరియు రిటైర్డ్ హెడ్ కానిస్టేబుల్.
+              ఉభయులు ప్రసిద్ధ హరికథా కళాకారులు.
+            </p>
+
+
+
+            
+            <div class="two-images-mobile">
+              <img src="About/info/mom.png" alt="Mrs. Balam Nagamani Bhagavatarini">
+              <img src="About/info/dad.png" alt="Mr. Balam Suryachandra Rao Bhagavatarulu">
+            </div>
+
+            <h3 class="about-title">విద్యాభ్యాసం</h3>
+            <p>
+  నేను ప్రాథమిక విద్యను <strong>తణుకు మేడబడినందు</strong> మొదటి తరగతి నుండి ఏడవ తరగతి వరకు పూర్తిచేశాను.
+  ఎనిమిదవ తరగతిని <strong>అత్తిలి గర్ల్స్ స్కూల్</strong>లో చదువుకున్నాను.
+  ఆ తర్వాత <strong>శ్రీ సర్వారాయ హరికథ పాఠశాల</strong>, కపిలేశ్వరపురం (తూర్పుగోదావరి జిల్లా) నందు
+  నా 12వ ఏట ప్రవేశం పొందాను. ఈ సంస్థ వ్యవస్థాపకులు రాజమహేంద్రవరం మాజీ కేంద్ర మంత్రివర్యులు
+  స్వర్గీయ <strong>బలుసు ప్రభాకర బుచ్చి కృష్ణ సత్యనారాయణరావు జమీందారు గారు</strong> మరియు
+  వారి ధర్మపత్ని <strong>శ్రీమతి రాజరాజేశ్వరమ్మ రాణి గారు</strong>.
+</p>
+<p>
+  నేను <strong>శ్రీ సర్వారాయ హరికథ గురుకుల కళాశాల</strong>లో 12వ తరగతిని పూర్తిచేశాను,
+  అక్కడ <strong>6 సంవత్సరాలపాటు</strong> హరికథ విద్యను అభ్యసించాను.
+  అనంతరం <strong>ఆంధ్ర విశ్వవిద్యాలయం, విశాఖపట్నం</strong> నందు
+  <strong>బి.ఏ. (BA)</strong> పూర్తి చేశాను, తరువాత
+  <strong>శ్రీ వెంకటేశ్వర విశ్వవిద్యాలయం, తిరుపతి</strong> నందు
+  <strong>ఎం.ఏ. (తెలుగు)</strong> పట్టా సాధించాను.
+</p>
+
+            <div class="info-image">
+              <img src="About/info/1-10.png" alt="Education photo">
+            </div>
+
+            <h3 class="about-title">అధ్యాపకులు</h3>
+            <div class="teacher-inline">
+              <p><strong style="color: gold;">సంగీతం:</strong> బ్రహ్మశ్రీ మహేంద్రవాడ కామేశ్వరరావు గారి వద్ద శిక్షణ పొందాను.</p>
+<p><strong style="color: gold;">సంస్కృతం:</strong> శ్రీమాన్ అంగర సింగరాచార్యులు గారి వద్ద అభ్యాసం చేశాను.</p>
+<p><strong style="color: gold;">తెలుగు:</strong> శ్రీ మేదిని సత్యనారాయణ గారు, కుమారి పప్పు సత్యవతి గారి వద్ద శిక్షణ పొందాను.</p>
+<p><strong style="color: gold;">నాట్యం:</strong> శ్రీ కళా కృష్ణ గారు, కుమారి బాదంపూడి లక్ష్మీ గారు, బ్రహ్మశ్రీ పసుమర్తి శ్రీనివాస శర్మ గారి వద్ద అభ్యసించాను.</p>
+<p><strong style="color: gold;">లయ:</strong> శ్రీ వక్కలగడ్డ నాగేశ్వరరావు గారి వద్ద సాధన చేశాను.</p>
+<p><strong style="color: gold;">హరికథలు:</strong> బ్రహ్మశ్రీ అక్క పెద్ది శ్రీరామ శర్మ భాగవతులు గారు, బ్రహ్మశ్రీ తణుకు విశ్వనాథం భాగవతులు గారు,
+  శ్రీ గంటా గోపాలరావు భాగవతులు గారు, శ్రీమతి ఉమా చౌదరి భాగవతారిణి గారు, శ్రీ పులుగు వీరయ్య భాగవతులు గార్ల వద్ద శిక్షణ పొందాను.</p>
+<p><strong style="color: gold;">సంస్కృత హరికథలు:</strong> శ్రీమాన్ నల్లాన్ చక్రవర్తుల కృష్ణమాచార్యులు గారి వద్ద అభ్యసించాను.</p>
+
+
+            </div>
+
+
+            <h3 class="about-title">నా వృతిిపరా టన</h3>
+            <p>
+  నేను నా <strong>12 ఏట</strong> నుండే హరికథలలో శిక్షణ పొందుతూ, హరికథా ప్రదర్శనలు ఇస్తూ పలువురు ప్రముఖుల ప్రశంసలు అందుకున్నాను.
+  ముఖ్యంగా విజయనగరంలోని <strong>శ్రీమద్ అజ్జాడ ఆదిభట్ల నారాయణదాసు గారి ఆరాధన ఉత్సవాలలో</strong>
+  హరికథ పోటీలలో ప్రథమ బహుమతి అందుకున్నాను.
+  సద్గురువుల శిక్షణలో విద్యాభ్యాసం చేస్తూనే అనేక హరికథ ప్రదర్శనలు ఇవ్వడం జరిగింది.
+</p>
+<p>
+  మా తల్లితండ్రులు ఉభయులు హరికథా రంగంలో ఉండడం వల్ల నాకు చక్కటి మార్గదర్శకత్వం లభించింది.
+  నేను విద్యనభ్యసించిన <strong>శ్రీ సర్వారాయ హరికథ పాఠశాలలో</strong> జరిగిన హరికథ పోటీలలో
+  నాకు ప్రథమ బహుమతిగా <strong>రజిత కంకణ ధారణ</strong> చేశారు.
+  నేను పల్లెల్లో, పట్టణాల్లో, రాష్ట్ర రాష్ట్రేతర ప్రాంతాలలో ఇప్పటివరకు
+  <strong>5000+</strong> హరికథా గానాలు నిర్వహించాను.
+  తెలుగు భాషలోనే కాక సంస్కృత భాషలోను హరికథా గానాలు చేయడం నా ప్రత్యేకత.
+</p>
+<p>
+  నేను హరికథ గానాలు చేసిన కొన్ని ముఖ్యమైన ప్రదేశాలు:
+  <strong>హర్యానా</strong> – ప్రపంచ తెలుగు మహాసభలు, ఆంధ్ర భవన్, న్యూ ఢిల్లీ (1998);
+  <strong>ఒరిస్సా</strong> – తెలుగు సాహిత్య సమైక్య, భువనేశ్వర్ మరియు బరంపురం;
+  <strong>పశ్చిమ బెంగాల్</strong> – శ్రీ వీరబ్రహ్మేంద్ర స్వామి వారి ఆరాధన ఉత్సవ కమిటీ, ఖరగపూర్;
+  <strong>కర్ణాటక</strong> – తెలుగు సాహిత్య సమైక్య, బెంగళూరు మరియు బళ్లారి;
+  <strong>తమిళనాడు</strong> – మ్యూజిక్ అకాడమీ, మద్రాస్; TTD కల్యాణ మండపం, మేళ్లటూరు; కుంభకోణం;
+  <strong>మధ్యప్రదేశ్</strong> – కాళిదాస అకాడమీ, ఉజ్జయిని;
+  <strong>ఉత్తరప్రదేశ్</strong> – కాశీ ముముక్షు భవనం, వారణాసి.
+</p>
+
+
+
+            <h3 class="about-title">ఆంధ్ర ప్రదేశ్</h3>
+            <p>
+              <p>
+                తిరుమల నాదనీరాజనం, శ్రీ వేంకటేశ్వర భక్తి ఛానల్, శ్రీ అలివేలు మంగాపురం, నాగలాపురం, కాణిపాకం,
+                శ్రీశైలం, శ్రీమద్విరాట్ పోతులూరి వీరబ్రహ్మేంద్ర స్వామి దేవస్థానం – బ్రహ్మంగారిమఠం,
+                విజయవాడ – శ్రీ ఇంద్రకీలాద్రి కనకదుర్గమ్మ దేవస్థానం, ద్వారకాతిరుమల – శ్రీ వెంకటేశ్వర స్వామి వారి దేవస్థానం,
+                భీమవరం – శ్రీ మావుళ్లమ్మ తల్లి దేవస్థానం, అన్నవరం – శ్రీ సత్యనారాయణ స్వామి వారి దేవస్థానం,
+                రాజమహేంద్రవరం – గంగా హారతి మరియు కోటి లింగాల రేవు, ఆనంద కళా కేంద్రం,
+                కాకినాడ – సూర్య కళా మందిరం, పంచారామ క్షేత్రాలు, విశాఖపట్నం – కళాభారతి,
+                శ్రీకాకుళం – బాపూజీ కళామందిరం, బెజ్జిపుట్టుగ – శ్రీ చక్రధర దోలోత్సవాలు,
+                అనకాపల్లి – శ్రీ నూకాంబిక అమ్మవారి దేవస్థానం,
+                శ్రీ గౌరీ పంచాయతన దేవాలయ మండపం – శ్రావణమాసం నెలరోజులు,
+                శ్రీ కామాక్షి దేవస్థ దేవస్థానం.
+              </p>
+              
+            </p>
+
+            <h3 class="about-title">తెలంగాణ</h3>
+            <p>
+              హైదరాబాద్ రవీంద్ర భారతి, త్యాగరాయ గాన సభ, శంకరమఠం, వేములవాడ- శ్రీ రాజరాజేశ్వర స్వామి వారి దేవస్థానం, యాదగిరిగుట్ట- శ్రీ లక్ష్మీనరసింహస్వామి వారి దేవస్థానం, సిరిసిల్ల,సూర్యాపేట- శ్రీ వేదాంతం భజన మందిరం, పాలవంచ, ఖమ్మం- టీటీడీ కల్యాణ మండపం.
+
+            </p>
+
+            <h3 class="about-title">అవార్డులు</h3>
+            <p>
+              1. <strong style="color: gold;">జాతీయ బంగారు నంది పురస్కారం</strong> – 2023, జి.సి.ఎస్. వల్లూరి ఫౌండేషన్, తెలంగాణ ప్రభుత్వ భాషా సాంస్కృతిక శాఖ ఆధ్వర్యంలో, తేదీ: 17 సెప్టెంబర్, వేదిక: రవీంద్ర భారతి, హైదరాబాద్.<br>
+              2. <strong style="color: gold;">గౌరవ డాక్టరేట్</strong> – 2023, ఇంటర్నేషనల్ పీస్ యూనివర్సిటీ, పాండిచ్చేరి.<br>
+              3. <strong style="color: gold;">భారత కళా రత్న అవార్డు</strong> – 2023, ఇంటర్నేషనల్ పీస్ కౌన్సిల్, పాండిచ్చేరి.<br>
+              4. <strong style="color: gold;">స్వర్ణ కంకణ ఘన సన్మానం</strong> – 2010, పశ్చిమగోదావరి జిల్లా కలెక్టర్ శ్రీమతి A. వాణి ప్రసాద్ గారి స్వహస్తాల మీదుగా, సంస్థ: శ్రీ గరికపాటి ఆర్ట్స్ థియేటర్స్, ఏలూరు.<br>
+              5. <strong style="color: gold;">రజిత కిరీట ధారణ</strong> – 2019, సంస్థ: శ్రీ గరికపాటి ఆర్ట్స్ థియేటర్స్, ఏలూరు.<br>
+              6. <strong style="color: gold;">సువర్ణ హస్త కంకణ ఘన సన్మానం</strong> – 2023, పార్లమెంట్ సభ్యురాలు డాక్టర్ భీశెట్టి వెంకట సత్యవతి గారి దంపతుల చేతుల మీదుగా, సంస్థ: శ్రీ గౌరీ సేవా సంఘం, వేదిక: శ్రీ గౌరీ పరమేశ్వరి అమ్మవారి దేవస్థానం, అనకాపల్లి.<br>
+              7. <strong style="color: gold;">హరికథ రత్న బిరుదు ప్రధానం</strong> – 2023, బి.వి.ఆర్. కళా కేంద్రం, తాడేపల్లిగూడెం.<br>
+              8. <strong style="color: gold;">హరికథ సరస్వతి బిరుదు ప్రధానం</strong> – 2023, శ్రీమద్ అజ్జాడ ఆదిభట్ల నారాయణదాసు శిష్య ప్రశిష్య సంఘం, విజయవాడ.<br>
+              9. <strong style="color: gold;">హరికథ చూడామణి బిరుదు ప్రధానం</strong> – శ్రీమద్ అజ్జాడ ఆదిభట్ల నారాయణదాస సేవా సమితి, విజయనగరం.<br>
+              10. <strong style="color: gold;">ప్రథమ బహుమతి</strong> – 1998, శ్రీమద్ అజ్జాడ ఆదిభట్ల నారాయణదాసు గారి ఆరాధనోత్సవాలు, విజయనగరం.<br>
+              11. <strong style="color: gold;">శ్రీ స్వామి వివేకానంద ఎక్సలెన్సీ అవార్డు</strong> – 2018, యువ కళావాహిని మరియు శారద కళా సమితి సంయుక్త ఆధ్వర్యంలో, విజయవాడ.<br>
+              12. <strong style="color: gold;">లింకా బుక్ అవార్డు</strong> – 2015, విశాఖపట్నం.<br>
+              13. <strong style="color: gold;">హరికథ గాన ప్రపూర్ణ బిరుదు ప్రధానం</strong> – 2020, అక్షరం ఆర్ట్స్, వేదిక: వై.ఎం.హెచ్.ఏ. హాలు, ఏలూరు.<br>
+              14. <strong style="color: gold;">ఉజ్జయిని కాళిదాస అకాడమీ సత్కారం</strong> – <em>సుందరకాండ సంస్కృత హరికథాగానం</em> చేసినందుకు గాను, శ్రీ సర్వారాయ కమిటీ, పిఠాపురం, వ్యవస్థాపకుడు శ్రీ S.B.P.B.K. సత్యనారాయణరావు గారి చేత నాలుగు కాసుల బంగారు చైన్‌తో ఘన సత్కారం.<br>
+              15. <strong style="color: gold;">హరికథాగాన ప్రవీణ బిరుదు ప్రధానం</strong> – శ్రీహరి యజ్ఞ సేవా సమితి, ఇందుపల్లి.<br>
+              16. <strong style="color: gold;">శ్రీ సర్వారాయ హరికథ పాఠశాల బహుమతి</strong> – కపిలేశ్వరపురం, హరికథ పోటీలలో ప్రథమ బహుమతి, వెండి కంకణ ధారణ.<br>
+              17. <strong style="color: gold;">అనర్గళ కంఠామృతం</strong> – శ్రీ వీరబ్రహ్మం కమిటీ, పిఠాపురం.<br>
+              18. <strong style="color: gold;">హరికథ భారతి బిరుదు ప్రధానం</strong> – శ్రీ కైవల్యానంద సరస్వతి స్వామి, పూర్వాశ్రమంలో శ్రీ బుర్ర శివరామకృష్ణ శర్మ భాగవతులు, విజయవాడ.<br>
+              19. <strong style="color: gold;">నాట్య మయూరి బిరుదు ప్రధానం</strong> – శ్రీ నరసింహ స్వామి జయంతోత్సవాలు, మేళ్ల టూరు.<br>
+              20. <strong style="color: gold;">స్వర్ణ కోకిల</strong> – 2022, శ్రీ గౌరీ పంచాయతన దేవాలయ మండపం, గవరపాలెం, అనకాపల్లి.<br>
+              21. <strong style="color: gold;">సకల కళాభారతి</strong> – 2021, శ్రీ గౌరీ పరమేశ్వరి దేవస్థానం, అనకాపల్లి.<br>
+              22. <strong style="color: gold;">ఆత్మీయ సత్కార సన్మాన పత్రం</strong> – శ్రీ శ్రీ రామ రక్ష సేవా సంఘం, మాళవ్య నగర్, గూడూరు, 14వ జయవార సత్సంగ భజన వార్షికోత్సవ సందర్భంగా బహుకరించారు.
+            </p>
+            
+
+          </div><!-- /info-matter -->
+        </div><!-- /subpanel -->
+      </div><!-- /subpanel-group -->
+    </div><!-- /lang-te -->
+
+  </div><!-- /lang-content -->
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+
+
+
+
+
+
+          
+          
+          
+
+            
+            
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- 2) Sangeetha Vibhagamulu (Music Divisions) -->
+    <section id="panel-harikatha" role="tabpanel" hidden>
+      <h2>Sangeetha Vibhagamulu</h2>
+
+      <nav class="subtabs" aria-label="Sangeetha options" role="tablist">
+        <button class="subtab-btn active" role="tab" aria-selected="true"
+                data-subpanel="sangeetha-harikatha">Harikatha Artists</button>
+        <button class="subtab-btn" role="tab" aria-selected="false"
+                data-subpanel="sangeetha-instruments">Musicians</button>
+        <button class="subtab-btn" role="tab" aria-selected="false"
+                data-subpanel="sangeetha-rangastalam">Rangastalam (Stage Artists)</button>
+      </nav>
+
+      <div class="subpanel-group">
+        <div id="sangeetha-harikatha" class="subpanel">
+          <ul>
+
+
+
+
+<ul class="avatar-grid">
+  <li>
+    <figure>
+      <img src="Sangeetha Vibhagamulu/Famous Harikatha Artists/శ్రీమతి రావు కమల కుమారి భాగవతారిణి.png" alt="Artist 1">
+      <figcaption>
+        <span class="cap cap-te" lang="te">శ్రీమతి రావు కమల కుమారి భాగవతారిణి</span>
+        <span class="cap cap-en" lang="en">Mrs. Rao Kamala Kumari Bhagavatarini Garu</span><!-- English name (optional) -->
+      </figcaption>
+    </figure>
+  </li>
+
+  <li>
+    <figure>
+      <img src="Sangeetha Vibhagamulu/Famous Harikatha Artists/పద్మశ్రీ కోట సచ్చిదానంద శాస్త్రి భాగవతులు.png" alt="Artist 2">
+      <figcaption>
+        <span class="cap cap-te" lang="te">పద్మశ్రీ కోట సచ్చిదానంద శాస్త్రి భాగవతులు</span>
+        <span class="cap cap-en" lang="en">Padmasree Kota Sachidananda Sastri Bhagavatu  Garu</span>
+      </figcaption>
+    </figure>
+  </li>
+
+  <li>
+    <figure>
+      <img src="Sangeetha Vibhagamulu/Famous Harikatha Artists/బ్రహ్మశ్రీ కొమ్ము సుబ్రమణ్య వరప్రసాద్ భాగవతులు.png" alt="Artist 3">
+      <figcaption>
+        <span class="cap cap-te" lang="te">బ్రహ్మశ్రీ కొమ్ము సుబ్రమణ్య వరప్రసాద్ భాగవతులు</span>
+        <span class="cap cap-en" lang="en">Brahmashree Kommu Subramanya Varaprasad Bhagavatu  Garu</span>
+      </figcaption>
+    </figure>
+  </li>
+ <li>
+    <figure>
+      <img src="Sangeetha Vibhagamulu/Famous Harikatha Artists/శ్రీమతి విన్నకోట రామకుమారి భాగవతారిణి.png" alt="Artist 4">
+      <figcaption>
+        <span class="cap cap-te" lang="te">శ్రీమతి విన్నకోట రామకుమారి భాగవతారిణి</span>
+        <span class="cap cap-en" lang="en"> Mrs. Winnakota Ramakumari Bhagavatarini Garu</span>
+      </figcaption>
+    </figure>
+  </li>
+
+
+
+
+
+
+
+
+  <li>
+    <figure>
+      <img src="Sangeetha Vibhagamulu/Famous Harikatha Artists/బ్రహ్మశ్రీ తూములూరి లక్ష్మణ  శాస్త్రి భాగవతులు.png" alt="Artist 4">
+      <figcaption>
+        <span class="cap cap-te" lang="te">బ్రహ్మశ్రీ తూములూరి లక్ష్మణ  శాస్త్రి భాగవతులు</span>
+        <span class="cap cap-en" lang="en">Brahmashri Tumuluri Lakshmana Shastri Bhagavathulu Garu</span>
+      </figcaption>
+    </figure>
+  </li>
+
+  <li>
+    <figure>
+      <img src="Sangeetha Vibhagamulu/Famous Harikatha Artists/బ్రహ్మశ్రీ బుర్ర శివరామకృష్ణ శర్మ భాగవతులు.png" alt="Artist 4">
+      <figcaption>
+        <span class="cap cap-te" lang="te">బ్రహ్మశ్రీ బుర్ర శివరామకృష్ణ శర్మ భాగవతులు</span>
+        <span class="cap cap-en" lang="en">Brahmashree Burra Sivaramakrishna Sharma Bhagavati Garu</span>
+      </figcaption>
+    </figure>
+  </li>
+
+  <li>
+    <figure>
+      <img src="Sangeetha Vibhagamulu/Famous Harikatha Artists/బ్రహ్మశ్రీ ముప్పవరపు సింహాచల శాస్త్రి భాగవతులు.png" alt="Artist 4">
+      <figcaption>
+        <span class="cap cap-te" lang="te">బ్రహ్మశ్రీ ముప్పవరపు సింహాచల శాస్త్రి భాగవతులు</span>
+        <span class="cap cap-en" lang="en">Brahmashree Simhachala Sastri Bhagavatu  Garu</span>
+      </figcaption>
+    </figure>
+  </li>
+
+  <li>
+    <figure>
+      <img src="Sangeetha Vibhagamulu/Famous Harikatha Artists/శ్రీ వై వెంకటేశ్వర్లు భాగవతులు తిరుపతి శ్రీ వెంకటేశ్వర విశ్వవిద్యాలయం.png" alt="Artist 4">
+      <figcaption>
+        <span class="cap cap-te" lang="te">శ్రీ వై వెంకటేశ్వర్లు భాగవతులు — తిరుపతి శ్రీ వెంకటేశ్వర విశ్వవిద్యాలయం</span>
+        <span class="cap cap-en" lang="en">Sri Y Venkateswarlu Bhagavathulu garu Tirupati Sri Venkateswara University</span>
+      </figcaption>
+    </figure>
+  </li>
+
+  <li>
+    <figure>
+      <img src="Sangeetha Vibhagamulu/Famous Harikatha Artists/శ్రీమతి జయంతి సావిత్రి భాగవతారిణి.png" alt="Artist 4">
+      <figcaption>
+        <span class="cap cap-te" lang="te">శ్రీమతి జయంతి సావిత్రి భాగవతారిణి</span>
+        <span class="cap cap-en" lang="en">         Mrs. Jayanthi Savitri Bhagavatarini Garu</span>
+      </figcaption>
+    </figure>
+  </li>
+
+ 
+</ul>
+
+            
+
+
+
+
+
+
+
+
+
+          </ul>
+        </div>
+        <div id="sangeetha-instruments" class="subpanel" hidden>
+          <ul>
+
+
+
+
+
+            <ul class="avatar-grid">
+                 <li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Musical Instrument Players/పద్మ విభూషణ్, డాక్టర్ మంగళంపల్లి బాలమురళీకృష్ణ గారు..png" alt="Artist 4">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">పద్మ విభూషణ్, డాక్టర్ మంగళంపల్లి బాలమురళీకృష్ణ గారు</span>
+                    <span class="cap cap-en" lang="en">Padma Vibhushan, Dr. Mangalampalli Balamuralikrishna Garu</span>
+                  </figcaption>
+                </figure>
+              </li> 
+              <li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Musical Instrument Players/పద్మశ్రీ అన్నవరపు రామస్వామి గారు.png" alt="Artist 4">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">పద్మశ్రీ అన్నవరపు రామస్వామి గారు</span>
+                    <span class="cap cap-en" lang="en">Padmashri Annavarapu Ramaswamy  Garu</span>
+                  </figcaption>
+                </figure>
+              </li>
+            
+          
+            
+              
+           
+              <li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Musical Instrument Players/పద్మశ్రీ A కన్యాకుమారి గారు.png" alt="Artist 4">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">పద్మశ్రీ A కన్యాకుమారి గారు</span>
+                    <span class="cap cap-en" lang="en">Padma Shri A Kanyakumari Garu</span>
+                  </figcaption>
+                </figure>
+              </li>
+            
+             
+              <li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Musical Instrument Players/పద్మశ్రీ ఎల్లా వెంకటేశ్వరరావు గారు.png" alt="Artist 4">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">పద్మశ్రీ ఎల్లా వెంకటేశ్వరరావు గారు</span>
+                    <span class="cap cap-en" lang="en">Padma Shri Ella Venkateswara Rao Garu</span>
+                  </figcaption>
+                </figure>
+              </li>
+                <li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Musical Instrument Players/గౌరవనీయులు శ్రీ పత్రి సతీష్ కుమార్ గారు.png" alt="Artist 4">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">గౌరవనీయులు శ్రీ పత్రి సతీష్ కుమార్ గారు</span>
+                    <span class="cap cap-en" lang="en"> Mr. Patri Satish Kumar Garu</span>
+                  </figcaption>
+                </figure>
+              </li>
+            
+              <li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Musical Instrument Players/పద్మశ్రీ దండమూడి సుమతి గారు.png" alt="Artist 4">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">పద్మశ్రీ దండమూడి సుమతి గారు</span>
+                    <span class="cap cap-en" lang="en">Padma Shri Dandamudi Sumathi Garu </span>
+                  </figcaption>
+                </figure>
+              </li>
+            
+             
+            
+              <li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Musical Instrument Players/శ్రీ గరిమెళ్ళ బాలకృష్ణ ప్రసాద్ గారు.png" alt="Artist 4">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">శ్రీ గరిమెళ్ళ బాలకృష్ణ ప్రసాద్ గారు</span>
+                    <span class="cap cap-en" lang="en">Shri Garimella Balakrishna Prasad Garu</span>
+                  </figcaption>
+                </figure>
+              </li>
+            
+              <li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Musical Instrument Players/శ్రీమాన్ నల్లాన్ చక్రవర్తుల కృష్ణమాచార్యులు గారు.png" alt="Artist 4">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">శ్రీమాన్ నల్లాన్ చక్రవర్తుల కృష్ణమాచార్యులు గారు</span>
+                    <span class="cap cap-en" lang="en">Shriman Nallan Chakravartula Krishnamacharyu Garu</span>
+                  </figcaption>
+                </figure>
+              </li> <li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Musical Instrument Players/బ్రహ్మశ్రీ మావుడూరి సత్యనారాయణ శర్మ గారు అండ్ బ్రదర్స్.png" alt="Artist 4">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">బ్రహ్మశ్రీ మావుడూరి సత్యనారాయణ శర్మ గారు అండ్ బ్రదర్స్</span>
+                    <span class="cap cap-en" lang="en">Brahmashree Mavuduri Satyanarayana Sharma Garu and Brothers</span>
+                  </figcaption>
+                </figure>
+              </li>
+            </ul>
+            
+            
+
+
+
+
+<!-- 
+            <ul class="avatar-grid">
+              <li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Musical Instrument Players/నాట్యాచార్య శ్రీ కళా కృష్ణ గారు.png" alt="Artist 4">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">నాట్యాచార్య శ్రీ కళా కృష్ణ గారు</span>
+                    <span class="cap cap-en" lang="en">Natyacharya Sri Kala Krishna Garu</span>
+                  </figcaption>
+                </figure>
+              </li>
+            
+              <li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Musical Instrument Players/Dr బొంతల కోటి సత్య వర ప్రసాద్ గారు.png" alt="Artist 1">
+                  <figcaption>Dr బొంతల కోటి సత్య వర ప్రసాద్ గారు</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Musical Instrument Players/అంతర్జాతీయ కళాకారులు బ్రహ్మశ్రీ  సరస్వతుల హనుమంతరావు గారు మృదంగ  విద్వాన్.png" alt="Artist 2">
+                  <figcaption>అంతర్జాతీయ కళాకారులు బ్రహ్మశ్రీ  సరస్వతుల హనుమంతరావు గారు మృదంగ  విద్వాన్</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Musical Instrument Players/కుమారి బాదంపూడి లక్ష్మీ గారు.png" alt="Artist 3">
+                  <figcaption>కుమారి బాదంపూడి లక్ష్మీ గారు</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Musical Instrument Players/గౌరవనీయులు శ్రీ పత్రి సతీష్ కుమార్ గారు.png" alt="Artist 4">
+                  <figcaption>గౌరవనీయులు శ్రీ పత్రి సతీష్ కుమార్ గారు</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Musical Instrument Players/డాక్టర్ వనజ ఉదయ్ గారు.png" alt="Artist 4">
+                  <figcaption>డాక్టర్ వనజ ఉదయ్ గారు</figcaption>
+                </figure>
+              </li>
+              
+              
+              <li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Musical Instrument Players/నాట్యాచార్య శ్రీ కళా కృష్ణ గారు.png" alt="Artist 4">
+                  <figcaption>నాట్యాచార్య శ్రీ కళా కృష్ణ గారు</figcaption>
+                </figure>
+              </li><li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Musical Instrument Players/పద్మ విభూషణ్, డాక్టర్ మంగళంపల్లి బాలమురళీకృష్ణ గారు..png" alt="Artist 4">
+                  <figcaption>పద్మ విభూషణ్, డాక్టర్ మంగళంపల్లి బాలమురళీకృష్ణ గారు</figcaption>
+                </figure>
+              </li><li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Musical Instrument Players/పద్మశ్రీ A కన్యాకుమారి గారు.png" alt="Artist 4">
+                  <figcaption>పద్మశ్రీ A కన్యాకుమారి గారు</figcaption>
+                </figure>
+              </li><li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Musical Instrument Players/పద్మశ్రీ అన్నవరపు రామస్వామి గారు.png" alt="Artist 4">
+                  <figcaption>పద్మశ్రీ అన్నవరపు రామస్వామి గారు</figcaption>
+                </figure>
+              </li><li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Musical Instrument Players/పద్మశ్రీ ఎల్లా వెంకటేశ్వరరావు గారు.png" alt="Artist 4">
+                  <figcaption>పద్మశ్రీ ఎల్లా వెంకటేశ్వరరావు గారు</figcaption>
+                </figure>
+              </li>
+              
+              
+              
+              <li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Musical Instrument Players/పద్మశ్రీ దండమూడి సుమతి గారు.png" alt="Artist 4">
+                  <figcaption>పద్మశ్రీ దండమూడి సుమతి గారు</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Musical Instrument Players/బ్రహ్మశ్రీ పాలపర్తి నాగేశ్వరరావు గారు వాయులీన విద్వాంసులు -AIRఆర్టిస్ట్.png" alt="Artist 4">
+                  <figcaption>/బ్రహ్మశ్రీ పాలపర్తి నాగేశ్వరరావు గారు వాయులీన విద్వాంసులు - AIRఆర్టిస్ట్</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Musical Instrument Players/బ్రహ్మశ్రీ మల్లాది సూరిబాబు గారు.png" alt="Artist 4">
+                  <figcaption>బ్రహ్మశ్రీ మల్లాది సూరిబాబు గారు</figcaption>
+                </figure>
+              </li><li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Musical Instrument Players/బ్రహ్మశ్రీ మావుడూరి సత్యనారాయణ శర్మ గారు అండ్ బ్రదర్స్.png" alt="Artist 4">
+                  <figcaption>బ్రహ్మశ్రీ మావుడూరి సత్యనారాయణ శర్మ గారు అండ్ బ్రదర్స్</figcaption>
+                </figure>
+              </li><li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Musical Instrument Players/బ్రహ్మశ్రీ మావుడూరి సూర్య ప్రకాశరావు శర్మగారు.png" alt="Artist 4">
+                  <figcaption>బ్రహ్మశ్రీ మావుడూరి సూర్య ప్రకాశరావు శర్మగారు</figcaption>
+                </figure>
+              </li>
+
+
+              <li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Musical Instrument Players/మృదంగ విద్వాన్ శ్రీ బొంతల కోటి కృష్ణారావు గారు.png" alt="Artist 4">
+                  <figcaption>మృదంగ విద్వాన్ శ్రీ బొంతల కోటి కృష్ణారావు గారు</figcaption>
+                </figure>
+              </li><li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Musical Instrument Players/లయబ్రహ్మ  శ్రీకాకుళపు సూరిబాబు గారు.png" alt="Artist 4">
+                  <figcaption>లయబ్రహ్మ శ్రీకాకుళపు సూరిబాబు గారు</figcaption>
+                </figure>
+              </li><li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Musical Instrument Players/శ్రీ కె.వి బ్రహ్మానందం గారు.png" alt="Artist 4">
+                  <figcaption>శ్రీ కె.వి బ్రహ్మానందం గారు</figcaption>
+                </figure>
+              </li><li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Musical Instrument Players/శ్రీ గరిమెళ్ళ బాలకృష్ణ ప్రసాద్ గారు.png" alt="Artist 4">
+                  <figcaption>శ్రీ గరిమెళ్ళ బాలకృష్ణ ప్రసాద్ గారు</figcaption>
+                </figure>
+              </li><li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Musical Instrument Players/శ్రీ జయప్రద రామ్మూర్తి గారు.png" alt="Artist 4">
+                  <figcaption>శ్రీ జయప్రద రామ్మూర్తి గారు</figcaption>
+                </figure>
+              </li>
+
+              <li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Musical Instrument Players/శ్రీ జాలరి సంపత్ కుమార్ గారు.png" alt="Artist 4">
+                  <figcaption>శ్రీ జాలరి సంపత్ కుమార్ గారు</figcaption>
+                </figure>
+              </li><li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Musical Instrument Players/శ్రీ డి శేషాచారి గారు (హైదరాబాద్ బ్రదర్స్).png" alt="Artist 4">
+                  <figcaption>శ్రీ డి శేషాచారి గారు (హైదరాబాద్ బ్రదర్స్)</figcaption>
+                </figure>
+              </li><li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Musical Instrument Players/శ్రీ మహేంద్రవాడ కామేశ్వరరావు గారు.png" alt="Artist 4">
+                  <figcaption>శ్రీ మహేంద్రవాడ కామేశ్వరరావు గారు</figcaption>
+                </figure>
+              </li><li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Musical Instrument Players/శ్రీమతి అమ్ముల దుర్గాభవాని గారు శ్రీ మోదుమూడి సుధాకర్ గారు శ్రీ సద్గురు చరణ్ గారు ఆల్ ఇండియా రేడియో కేంద్రం విజయవాడ.png" alt="Artist 4">
+                  <figcaption>శ్రీమతి అమ్ముల దుర్గాభవాని గారు శ్రీ మోదుమూడి సుధాకర్ గారు శ్రీ సద్గురు చరణ్ గారు ఆల్ ఇండియా రేడియో కేంద్రం విజయవాడ</figcaption>
+                </figure>
+              </li><li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Musical Instrument Players/శ్రీమతి జయంతి సావిత్రి భాగవతారిణి గారు.png" alt="Artist 4">
+                  <figcaption>శ్రీమతి జయంతి సావిత్రి భాగవతారిణి గారు</figcaption>
+                </figure>
+              </li>
+
+              <li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Musical Instrument Players/శ్రీమతి దాలిపర్తి ఉమామహేశ్వరి భాగవతారిణి గారు, మరియు నాట్యాచార్య శ్రీ కళా కృష్ణ గారు.png" alt="Artist 4">
+                  <figcaption>శ్రీమతి దాలిపర్తి ఉమామహేశ్వరి భాగవతారిణి గారు, మరియు నాట్యాచార్య శ్రీ కళా కృష్ణ గారు</figcaption>
+                </figure>
+              </li><li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Musical Instrument Players/శ్రీమతి మంజు భార్గవి గారు.png" alt="Artist 4">
+                  <figcaption>శ్రీమతి మంజు భార్గవి గారు</figcaption>
+                </figure>
+              </li><li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Musical Instrument Players/శ్రీమతి విష్ణుభట్ల సరస్వతి గారు(విష్ణుభట్ల సిస్టర్స్).png" alt="Artist 4">
+                  <figcaption>శ్రీమతి విష్ణుభట్ల సరస్వతి గారు(విష్ణుభట్ల సిస్టర్స్)</figcaption>
+                </figure>
+              </li><li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Musical Instrument Players/శ్రీమతి శారద రెడ్డి గారు.png" alt="Artist 4">
+                  <figcaption>శ్రీమతి శారద రెడ్డి గారు</figcaption>
+                </figure>
+              </li><li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Musical Instrument Players/శ్రీమతి స్వాతి స్వామినాథన్ గారు.png" alt="Artist 4">
+                  <figcaption>శ్రీమతి స్వాతి స్వామినాథన్ గారు</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Musical Instrument Players/శ్రీమాన్ నల్లాన్ చక్రవర్తుల కృష్ణమాచార్యులు గారు.png" alt="Artist 4">
+                  <figcaption>శ్రీమాన్ నల్లాన్ చక్రవర్తుల కృష్ణమాచార్యులు గారు</figcaption>
+                </figure>
+              </li>
+
+
+            </ul>
+            
+ -->
+
+
+
+
+
+
+
+
+
+         
+          </ul>
+        </div>
+        <div id="sangeetha-rangastalam" class="subpanel" hidden>
+          <ul>
+
+
+
+
+
+            <ul class="avatar-grid">
+                <li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Rangastalam (Stage) Artists/శ్రీ గుమ్మడి గోపాలకృష్ణ గారు.png" alt="Artist 3">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">శ్రీ గుమ్మడి గోపాలకృష్ణ గారు</span>
+                    <span class="cap cap-en" lang="en">Mr. Gummadi Gopalakrishna Garu</span>
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Rangastalam (Stage) Artists/శ్రీ జే కే విజయ్ కుమార్ గారు.png" alt="Artist 4">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">శ్రీ జే కే విజయ్ కుమార్ గారు</span>
+                    <span class="cap cap-en" lang="en">Shri JK Vijay Kumar  Garu</span>
+                  </figcaption>
+                </figure>
+              </li>
+            
+              <li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Rangastalam (Stage) Artists/శ్రీ నాయుడు గోపి గారు.png" alt="Artist 4">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">శ్రీ నాయుడు గోపి గారు</span>
+                    <span class="cap cap-en" lang="en">Mr. Naidu Gopi  Garu</span>
+                  </figcaption>
+                </figure>
+              </li>
+            
+              <li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Rangastalam (Stage) Artists/శ్రీ మల్లాడి శివ నారాయణ గారు.png" alt="Artist 4">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">శ్రీ మల్లాడి శివ నారాయణ గారు</span>
+                    <span class="cap cap-en" lang="en">Shri Malladi Siva Narayana  Garu</span>
+                  </figcaption>
+                </figure>
+              </li>
+            
+              <li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Rangastalam (Stage) Artists/శ్రీ షణ్ముఖి విజయ్ కుమార్ రాజు గారు.png" alt="Artist 4">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">శ్రీ షణ్ముఖి విజయ్ కుమార్ రాజు గారు</span>
+                    <span class="cap cap-en" lang="en">Shri Shanmukhi Vijay Kumar Raju  Garu</span>
+                  </figcaption>
+                </figure>
+              </li>
+            
+              <li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Rangastalam (Stage) Artists/శ్రీమతి రత్నశ్రీ గారు.png" alt="Artist 4">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">శ్రీమతి రత్నశ్రీ గారు</span>
+                    <span class="cap cap-en" lang="en">Mrs. Ratnashri  Garu</span>
+                  </figcaption>
+                </figure>
+              </li>
+            
+              <li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Rangastalam (Stage) Artists/దివిసీమ రంగస్థల కళాకారుల సంఘం అధ్యక్షులు కీర్తిశేషులు అడ్డాడ దుర్గా నాగేశ్వరరావు గారు.png" alt="Artist 1">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">దివిసీమ రంగస్థల కళాకారుల సంఘం అధ్యక్షులు కీర్తిశేషులు అడ్డాడ దుర్గా నాగేశ్వరరావు గారు</span>
+                    <span class="cap cap-en" lang="en">The president of Diviseema Rangasthala Artists Association is Kirti Seshu Addada Durga Nageswara Rao  Garu</span>
+                  </figcaption>
+                </figure>
+              </li>
+            
+              <li>
+                <figure>
+                  <img src="Sangeetha Vibhagamulu/Rangastalam (Stage) Artists/శ్రీ ఎస్ కే మిశ్రో గారు.png" alt="Artist 2">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">శ్రీ ఎస్ కే మిశ్రో గారు</span>
+                    <span class="cap cap-en" lang="en">Mr. SK Mishra  Garu.</span>
+                  </figcaption>
+                </figure>
+              </li>
+            
+            
+            </ul>
+            
+
+            
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3) Pramukhalu (Prominent People) -->
+    <section id="panel-music" role="tabpanel" hidden>
+      <h2>Pramukhalu </h2>
+
+      <nav class="subtabs" aria-label="Pramukhalu options" role="tablist">
+        <button class="subtab-btn active" role="tab" aria-selected="true"
+                data-subpanel="pramukhalu-politicians">Politicians &amp; Leaders</button>
+        <button class="subtab-btn" role="tab" aria-selected="false"
+                data-subpanel="pramukhalu-mysteries">Spiritualists</button>
+      </nav>
+
+      <div class="subpanel-group">
+        <div id="pramukhalu-politicians" class="subpanel">
+          <ul>
+
+            <ul class="avatar-grid">
+              <li>
+                <figure>
+                  <img src="Pramukhalu/Politicians & Leaders/ఆంధ్రప్రదేశ్ రాష్ట్ర మంత్రివర్యులు  శ్రీ నారా చంద్రబాబు నాయుడు గారు.png" alt="Artist 4">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">ఆంధ్రప్రదేశ్ రాష్ట్ర మాన్య ముఖ్యమంత్రివర్యులు గౌరవనీయులు శ్రీ నారా చంద్రబాబు నాయుడు గారు</span>
+                    <span class="cap cap-en" lang="en">Honorable Chief Minister of Andhra Pradesh, Sri Nara Chandrababu Naidu Garu</span>
+                  </figcaption>
+                </figure>
+              </li>
+            
+              <li>
+                <figure>
+                  <img src="Pramukhalu/Politicians & Leaders/ఆంధ్రప్రదేశ్ అసెంబ్లీ 1వ డిప్యూటీ స్పీకర్   శ్రీ మండలి బుద్ధ ప్రసాద్ గారు.png" alt="Artist 1">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">ఆంధ్రప్రదేశ్ అసెంబ్లీ 1వ డిప్యూటీ స్పీకర్   శ్రీ మండలి బుద్ధ ప్రసాద్ గారు</span>
+                    <span class="cap cap-en" lang="en">Andhra Pradesh Assembly 1st Deputy Speaker - Shri Mandali Buddha Prasad  Garu</span>
+                  </figcaption>
+                </figure>
+              </li>
+            
+              <li>
+                <figure>
+                  <img src="Pramukhalu/Politicians & Leaders/తెలంగాణ రాష్ట్ర సలహాదారు శ్రీమాన్ కెవి రమణాచారి గారు.png" alt="Artist 4">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">తెలంగాణ రాష్ట్ర సలహాదారు శ్రీమాన్ కెవి రమణాచారి గారు</span>
+                    <span class="cap cap-en" lang="en">Sriman KV Ramanachari  Garu., Telangana State Advisor</span>
+                  </figcaption>
+                </figure>
+              </li>
+            
+              <li>
+                <figure>
+                  <img src="Pramukhalu/Politicians & Leaders/మాజీ ఎమ్మెల్యే శ్రీ వర్ల రామయ్య గారు.png" alt="Artist 4">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">మాజీ ఎమ్మెల్యే శ్రీ వర్ల రామయ్య గారు</span>
+                    <span class="cap cap-en" lang="en">Former MLA Shri Varla Ramaiah  Garu.</span>
+                  </figcaption>
+                </figure>
+              </li>
+            
+              <li>
+                <figure>
+                  <img src="Pramukhalu/Politicians & Leaders/శ్రీ అయితాబత్తుల ఆనంద రావు గారు ఎమ్మెల్యే.png" alt="Artist 4">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">శ్రీ అయితాబత్తుల ఆనంద రావు గారు ఎమ్మెల్యే</span>
+                    <span class="cap cap-en" lang="en">Former ZPTC member Beji was born to Mr. Gohgala Krishna Rao  Garu.</span>
+                  </figcaption>
+                </figure>
+              </li>
+            
+              <li>
+                <figure>
+                  <img src="Pramukhalu/Politicians & Leaders/మాజీ కుప్పం నియోజకవర్గం తెలుగుదేశం ఇంచార్జ్-శ్రీ పి ఎస్ మునిరత్నం గారు.png" alt="Artist 4">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">మాజీ కుప్పం నియోజకవర్గం తెలుగుదేశం ఇంచార్జ్-శ్రీ పి ఎస్ మునిరత్నం గారు</span>
+                    <span class="cap cap-en" lang="en">Former Kuppam Constituency Telugu Desam Incharge-Sri PS Muniratnam Garu.</span>
+                  </figcaption>
+                </figure>
+              </li>
+            
+              <li>
+                <figure>
+                  <img src="Pramukhalu/Politicians & Leaders/విజయవాడ సెంట్రల్ ఎమ్మెల్యే శ్రీ మల్లాడి విష్ణు గారు.png" alt="Artist 4">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">విజయవాడ సెంట్రల్ ఎమ్మెల్యే శ్రీ మల్లాడి విష్ణు గారు</span>
+                    <span class="cap cap-en" lang="en">Vijayawada Central MLA Shri Malladi Vishnu  Garu.</span>
+                  </figcaption>
+                </figure>
+              </li>
+            
+              <li>
+                <figure>
+                  <img src="Pramukhalu/Politicians & Leaders/స్పీకర్             శ్రీ  పీతాని సత్యనారాయణ - మాజీ మంత్రివర్యులు‌.png" alt="Artist 4">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">స్పీకర్ శ్రీ పీతాని సత్యనారాయణ - మాజీ మంత్రివర్యులు‌</span>
+                    <span class="cap cap-en" lang="en">Shri Peethani Satyanarayana  Garu. - Former Ministers</span>
+                  </figcaption>
+                </figure>
+              </li>
+            
+              <li>
+                <figure>
+                  <img src="Pramukhalu/Politicians & Leaders/శ్రీ రాధా క్రిష్నయ్య బడేటి గారు  ఎమ్మెల్యే  ఏలూరు.png" alt="Artist 4">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">శ్రీ రాధా క్రిష్నయ్య బడేటి గారు  ఎమ్మెల్యే  ఏలూరు.</span>
+                    <span class="cap cap-en" lang="en">Sri Radha Krishnayya Badeti Garu M.L.A - Eluru </figcaption>
+                </figure>
+              </li>
+            
+              <li>
+                <figure>
+                  <img src="Pramukhalu/Politicians & Leaders/నరసాపురం ఎమ్మెల్యే శ్రీ బండారు మాధవ నాయుడు గారు.png" alt="Artist 4">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">నరసాపురం ఎమ్మెల్యే శ్రీ బండారు మాధవ నాయుడు గారు</span>
+                    <span class="cap cap-en" lang="en">Narasapuram MLA Sri Bandaru Madhava Naidu Garu</span>
+                  </figcaption>
+                </figure>
+              </li>
+            
+              <li>
+                <figure>
+                  <img src="Pramukhalu/Politicians & Leaders/మాజీ మంత్రివర్యులు శ్రీ  మరడాని రంగారావు గారు.png" alt="Artist 4">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">మాజీ మంత్రివర్యులు శ్రీ  మరడాని రంగారావు గారు</span>
+                    <span class="cap cap-en" lang="en">Former Ministers Mr. Maradani Ranga Rao  Garu</span>
+                  </figcaption>
+                </figure>
+              </li>
+            
+              <li>
+                <figure>
+                  <img src="Pramukhalu/Politicians & Leaders/శ్రీ సిరికొండ మధుసూధనాచారి  తెలంగాణ రాష్ట్ర శాసనసభ తొలి స్పీకర్.png" alt="Artist 4">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">శ్రీ సిరికొండ మధుసూధనాచారి  తెలంగాణ రాష్ట్ర శాసనసభ తొలి స్పీకర్</span>
+                    <span class="cap cap-en" lang="en">Shri Sirikonda Madhusudhanachari  Garu. - First Speaker of Telangana State Legislature </span>
+                  </figcaption>
+                </figure>
+              </li>
+            </ul>
+            
+
+
+
+
+
+
+
+<!-- 
+            <ul class="avatar-grid">
+              
+              
+              <li>
+                <figure>
+                  <img src="Pramukhalu/Politicians & Leaders/కళారత్న( హంస అవార్డు).png" alt="Artist 4">
+                  <figcaption> ఆంధ్రప్రదేశ్ రాష్ట్ర మాన్య ముఖ్యమంత్రివర్యులు గౌరవనీయులు శ్రీ నారా చంద్రబాబు నాయుడు గారు</figcaption>
+                </figure>
+              </li>
+              
+              <li>
+                <figure>
+                  <img src="Pramukhalu/Politicians & Leaders/ఆంధ్రప్రదేశ్ అసెంబ్లీ 1వ డిప్యూటీ స్పీకర్   శ్రీ మండలి బుద్ధ ప్రసాద్ గారు.png" alt="Artist 1">
+                  <figcaption>ఆంధ్రప్రదేశ్ అసెంబ్లీ 1వ డిప్యూటీ స్పీకర్   శ్రీ మండలి బుద్ధ ప్రసాద్ గారు</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <img src="Pramukhalu/Politicians & Leaders/ఎమ్మెల్యే, తెనాలి శ్రీ అన్నాబతుని శివ కుమార్ గారు.png" alt="Artist 2">
+                  <figcaption>ఎమ్మెల్యే, తెనాలి శ్రీ అన్నాబతుని శివ కుమార్ గారు</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <img src="Pramukhalu/Politicians & Leaders/ఎమ్మెల్సీ శ్రీ రాము సూర్య రావు గారు (ఆర్ఎస్ఆర్ మాస్టర్).png" alt="Artist 3">
+                  <figcaption>ఎమ్మెల్సీ శ్రీ రాము సూర్య రావు గారు (ఆర్ఎస్ఆర్ మాస్టర్)</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <img src="Pramukhalu/Politicians & Leaders/కలెక్టర్ శ్రీమతి జయలక్ష్మి.png" alt="Artist 4">
+                  <figcaption>కలెక్టర్ శ్రీమతి జయలక్ష్మి</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <img src="Pramukhalu/Politicians & Leaders/తెలంగాణ రాష్ట్ర సలహాదారు శ్రీమాన్ కెవి రమణాచారి గారు.png" alt="Artist 4">
+                  <figcaption>తెలంగాణ రాష్ట్ర సలహాదారు శ్రీమాన్ కెవి రమణాచారి గారు</figcaption>
+                </figure>
+              </li>
+            
+
+              <li>
+                <figure>
+                  <img src="Pramukhalu/Politicians & Leaders/నరసాపురం ఎమ్మెల్యే శ్రీ ఎం ప్రసాద్ రాజు గారు.png" alt="Artist 4">
+                  <figcaption>నరసాపురం ఎమ్మెల్యే శ్రీ ఎం ప్రసాద్ రాజు గారు</figcaption>
+                </figure>
+              </li>
+              
+              <li>
+                <figure>
+                  <img src="Pramukhalu/Politicians & Leaders/నరసాపురం ఎమ్మెల్యే శ్రీ బండారు మాధవ నాయుడు గారు.png" alt="Artist 4">
+                  <figcaption>నరసాపురం ఎమ్మెల్యే శ్రీ బండారు మాధవ నాయుడు గారు</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <img src="Pramukhalu/Politicians & Leaders/పార్లమెంటు సభ్యురాలు శ్రీమతి డాక్టర్ బిశెట్టి వెంకట సత్యవతి గారు.png" alt="Artist 4">
+                  <figcaption>పార్లమెంటు సభ్యురాలు శ్రీమతి డాక్టర్ బిశెట్టి వెంకట సత్యవతి గారు</figcaption>
+                </figure>
+              </li><li>
+                <figure>
+                  <img src="Pramukhalu/Politicians & Leaders/మాజీ ఎమ్మెల్యే శ్రీ అంబికా కృష్ణ గారు.png" alt="Artist 4">
+                  <figcaption>మాజీ ఎమ్మెల్యే శ్రీ అంబికా కృష్ణ గారు</figcaption>
+                </figure>
+              </li><li>
+                <figure>
+                  <img src="Pramukhalu/Politicians & Leaders/మాజీ ఎమ్మెల్యే శ్రీ పసల కనక సుందరం గారు.png" alt="Artist 4">
+                  <figcaption>మాజీ ఎమ్మెల్యే శ్రీ పసల కనక సుందరం గారు</figcaption>
+                </figure>
+              </li>
+
+
+
+              <li>
+                <figure>
+                  <img src="Pramukhalu/Politicians & Leaders/మాజీ ఎమ్మెల్యే శ్రీ వర్ల రామయ్య గారు.png" alt="Artist 4">
+                  <figcaption>మాజీ ఎమ్మెల్యే శ్రీ వర్ల రామయ్య గారు</figcaption>
+                </figure>
+              </li><li>
+                <figure>
+                  <img src="Pramukhalu/Politicians & Leaders/మాజీ కుప్పం నియోజకవర్గం తెలుగుదేశం ఇంచార్జ్-శ్రీ పి ఎస్ మునిరత్నం గారు.png" alt="Artist 4">
+                  <figcaption>మాజీ కుప్పం నియోజకవర్గం తెలుగుదేశం ఇంచార్జ్-శ్రీ పి ఎస్ మునిరత్నం గారు</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <img src="Pramukhalu/Politicians & Leaders/మాజీ జెడ్పిటిసి మెంబర్ బెజ్జి పుట్టుక శ్రీ పొందల కృష్ణారావు గారు.png" alt="Artist 4">
+                  <figcaption>మాజీ జెడ్పిటిసి మెంబర్ బెజ్జి పుట్టుక శ్రీ పొందల కృష్ణారావు గారు</figcaption>
+                </figure>
+              </li><li>
+                <figure>
+                  <img src="Pramukhalu/Politicians & Leaders/మాజీ మంత్రివర్యులు శ్రీ  మరడాని రంగారావు గారు.png" alt="Artist 4">
+                  <figcaption>మాజీ మంత్రివర్యులు శ్రీ  మరడాని రంగారావు గారు</figcaption>
+                </figure>
+              </li><li>
+                <figure>
+                  <img src="Pramukhalu/Politicians & Leaders/విజయవాడ సెంట్రల్ ఎమ్మెల్యే శ్రీ మల్లాడి విష్ణు గారు.png" alt="Artist 4">
+                  <figcaption>విజయవాడ సెంట్రల్ ఎమ్మెల్యే శ్రీ మల్లాడి విష్ణు గారు</figcaption>
+                </figure>
+              </li>
+              
+              
+              
+              
+              
+              <li>
+                <figure>
+                  <img src="Pramukhalu/Politicians & Leaders/శ్రీ అయితాబత్తుల ఆనంద రావు గారు ఎమ్మెల్యే.png" alt="Artist 4">
+                  <figcaption>శ్రీ అయితాబత్తుల ఆనంద రావు గారు ఎమ్మెల్యే</figcaption>
+                </figure>
+              </li><li>
+                <figure>
+                  <img src="Pramukhalu/Politicians & Leaders/శ్రీ రాధా క్రిష్నయ్య బడేటి గారు  ఎమ్మెల్యే  ఏలూరు.png" alt="Artist 4">
+                  <figcaption>శ్రీ రాధా క్రిష్నయ్య బడేటి గారు  ఎమ్మెల్యే  ఏలూరు.</figcaption>
+                </figure>
+              </li><li>
+                <figure>
+                  <img src="Pramukhalu/Politicians & Leaders/శ్రీ సిరికొండ మధుసూధనాచారి  తెలంగాణ రాష్ట్ర శాసనసభ తొలి స్పీకర్.png" alt="Artist 4">
+                  <figcaption>శ్రీ సిరికొండ మధుసూధనాచారి  తెలంగాణ రాష్ట్ర శాసనసభ తొలి స్పీకర్</figcaption>
+                  <figcaption></figcaption>
+                </figure>
+              </li><li>
+                <figure>
+                  <img src="Pramukhalu/Politicians & Leaders/స్పీకర్             శ్రీ  పీతాని సత్యనారాయణ - మాజీ మంత్రివర్యులు‌.png" alt="Artist 4">
+                  <figcaption>స్పీకర్ శ్రీ పీతాని సత్యనారాయణ - మాజీ మంత్రివర్యులు‌</figcaption>
+                </figure>
+              </li>
+</ul> -->
+
+
+
+
+
+
+
+          </ul>
+        </div>
+        <div id="pramukhalu-mysteries" class="subpanel" hidden>
+          <ul>
+
+
+
+
+
+
+            <ul class="avatar-grid">
+              <li>
+                <figure>
+                  <img src="Pramukhalu/Religious Mysteries Persons/బ్రహ్మశ్రీ చాగంటి కోటేశ్వరరావు గారు.png" alt="Artist 2">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">బ్రహ్మశ్రీ చాగంటి కోటేశ్వరరావు గారు</span>
+                    <span class="cap cap-en" lang="en"> Brahmashri Chaganti Koteswara Rao  Garu</span>
+                  </figcaption>
+                </figure>
+              </li>
+            
+              <li>
+                <figure>
+                  <img src="Pramukhalu/Religious Mysteries Persons/కళాభారతి  శ్రీ రాంబాబు గారు విశాఖపట్నం.png" alt="Artist 1">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">కళాభారతి శ్రీ రాంబాబు గారు విశాఖపట్నం</span>
+                    <span class="cap cap-en" lang="en">Kalabharati Shri Rambabu Garu Visakhapatnam</span>
+                  </figcaption>
+                </figure>
+              </li>
+            
+              <li>
+                <figure>
+                  <img src="Pramukhalu/Religious Mysteries Persons/బ్రహ్మశ్రీ సామవేదం షణ్ముఖ శర్మ గారు.png" alt="Artist 3">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">బ్రహ్మశ్రీ సామవేదం షణ్ముఖ శర్మ గారు</span>
+                    <span class="cap cap-en" lang="en">Brahmashree Samavedam Shanmukha Sharma  Garu.</span>
+                  </figcaption>
+                </figure>
+              </li>
+            
+              <li>
+                <figure>
+                  <img src="Pramukhalu/Religious Mysteries Persons/శ్రీ సత్య సాయి సేవ సంస్థ హైదరాబాద్ అధినేత శ్రీ శంకర నారాయణ గారు.png" alt="Artist 4">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">శ్రీ సత్య సాయి సేవ సంస్థ హైదరాబాద్ అధినేత శ్రీ శంకర నారాయణ గారు</span>
+                    <span class="cap cap-en" lang="en">Shri Sankara Narayana  Garu. is the head of Sri Sathya Sai Seva Sanstha, Hyderabad.</span>
+                  </figcaption>
+                </figure>
+              </li>
+            
+              <li>
+                <figure>
+                  <img src="Pramukhalu/Religious Mysteries Persons/శ్రీమతి భారతీయం సత్యవాణి గారు.png" alt="Artist 4">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">శ్రీమతి భారతీయం సత్యవాణి గారు</span>
+                    <span class="cap cap-en" lang="en">Mrs. Bharatiyam Satyavani Garu</span>
+                  </figcaption>
+                </figure>
+              </li>
+            
+              <li>
+                <figure>
+                  <img src="Pramukhalu/Religious Mysteries Persons/శ్రీశ్రీశ్రీ స్వస్వరూపానంద గిరి స్వామి గారు.png" alt="Artist 4">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">శ్రీశ్రీశ్రీ స్వస్వరూపానంద గిరి స్వామి గారు</span>
+                    <span class="cap cap-en" lang="en">Sri Sri Swaswarupananda Giri Swami  Garu</span>
+                  </figcaption>
+                </figure>
+              </li>
+            </ul>
+            
+
+
+
+
+
+
+
+
+
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="panel-cinema" role="tabpanel" hidden>
+      <h2>Film Celebrities</h2>
+    
+      <nav class="subtabs" aria-label="Film options" role="tablist">
+        <button class="subtab-btn active" role="tab" aria-selected="true"
+                data-subpanel="film-playback">Film Playback Singers</button>
+        <button class="subtab-btn" role="tab" aria-selected="false"
+                data-subpanel="film-artists">Film Artists &amp; Directors</button>
+      </nav>
+    
+      <div class="subpanel-group">
+        <div id="film-playback" class="subpanel">
+          
+
+
+
+
+
+
+          <ul class="avatar-grid">
+            <li>
+              <figure>
+                <img src="Film Celebrities/Film Playback singers/పద్మ విభూషణ్ SP బాలసుబ్రమణ్యం గారు.png" alt="Artist 1">
+                <figcaption>
+                  <span class="cap cap-te" lang="te">పద్మ విభూషణ్ SP బాలసుబ్రమణ్యం గారు</span>
+                  <span class="cap cap-en" lang="en">Padma Vibhushan SP Balasubramaniam  Garu</span>
+                </figcaption>
+              </figure>
+            </li>
+          
+            <li>
+              <figure>
+                <img src="Film Celebrities/Film Playback singers/గాన కోకిల  శ్రీమతి పి సుశీలమ్మ గారు.png" alt="Artist 2">
+                <figcaption>
+                  <span class="cap cap-te" lang="te">గాన కోకిల శ్రీమతి పి సుశీలమ్మ గారు</span>
+                  <span class="cap cap-en" lang="en">Singer Shrimati P Sushilamma  Garu</span>
+                </figcaption>
+              </figure>
+            </li>
+          
+            <li>
+              <figure>
+                <img src="Film Celebrities/Film Playback singers/గాయనీమణి శ్రీమతి ఎస్ జానకమ్మ గారు.png" alt="Artist 3">
+                <figcaption>
+                  <span class="cap cap-te" lang="te">గాయనీమణి శ్రీమతి ఎస్ జానకమ్మ గారు</span>
+                  <span class="cap cap-en" lang="en">Singer Mrs. S. Janakamma  Garu</span>
+                </figcaption>
+              </figure>
+            </li>
+          
+            <li>
+              <figure>
+                <img src="Film Celebrities/Film Playback singers/సంగీత దర్శకులు శ్రీ కోటి గారు.png" alt="Artist 4">
+                <figcaption>
+                  <span class="cap cap-te" lang="te">సంగీత దర్శకులు శ్రీ కోటి గారు</span>
+                  <span class="cap cap-en" lang="en">The music director is Mr. Koti  Garu</span>
+                </figcaption>
+              </figure>
+            </li>
+          
+            <li>
+              <figure>
+                <img src="Film Celebrities/Film Playback singers/సంగీత దర్శకులు శ్రీ చక్రి గారి సోదరి ఆదర్శిణి గారు.png" alt="Artist 4">
+                <figcaption>
+                  <span class="cap cap-te" lang="te">సంగీత దర్శకులు శ్రీ చక్రి గారి సోదరి ఆదర్శిణి గారు</span>
+                  <span class="cap cap-en" lang="en">Adarshini Garu, sister of Music director Sri Chakri  Garu</span>
+                </figcaption>
+              </figure>
+            </li>
+          
+            <li>
+              <figure>
+                <img src="Film Celebrities/Film Playback singers/శ్రీ బి ఏ నారాయణ గారు.png" alt="Artist 4">
+                <figcaption>
+                  <span class="cap cap-te" lang="te">శ్రీ బి ఏ నారాయణ గారు</span>
+                  <span class="cap cap-en" lang="en">Mr. BA Narayana  Garu</span>
+                </figcaption>
+              </figure>
+            </li>
+          
+            <li>
+              <figure>
+                <img src="Film Celebrities/Film Playback singers/శ్రీ పవన్ గారు.png" alt="Artist 4">
+                <figcaption>
+                  <span class="cap cap-te" lang="te">శ్రీ పవన్ గారు</span>
+                  <span class="cap cap-en" lang="en">Mr. Pawan  Garu</span>
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
+          
+
+
+
+
+
+
+
+
+      
+          
+        </div>
+        <div id="film-artists" class="subpanel" hidden>
+          <ul>
+
+
+
+
+            <ul class="avatar-grid">
+              <li>
+                <figure>
+                  <img src="Film Celebrities/Film Artists & Directors/కళాతపస్వి శ్రీ కె విశ్వనాథ్ గారు.png" alt="Artist 4">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">కళాతపస్వి శ్రీ కె విశ్వనాథ్ గారు</span>
+                    <span class="cap cap-en" lang="en">Kalathapaswi Shri K Vishwanath  Garu</span>
+                  </figcaption>
+                </figure>
+              </li>
+            
+              <li>
+                <figure>
+                  <img src="Film Celebrities/Film Artists & Directors/శ్రీ గొల్లపూడి మారుతీ రావు గారు.png" alt="Artist 4">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">శ్రీ గొల్లపూడి మారుతీ రావు గారు</span>
+                    <span class="cap cap-en" lang="en">Mr. Gollapudi Maruti Rao Garu</span>
+                  </figcaption>
+                </figure>
+              </li>
+            
+              <li>
+                <figure>
+                  <img src="Film Celebrities/Film Artists & Directors/శ్రీ మురళీమోహన్ గారు.png" alt="Artist 4">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">శ్రీ మురళీమోహన్ గారు</span>
+                    <span class="cap cap-en" lang="en">Mr. Murali Mohan  Garu</span>
+                  </figcaption>
+                </figure>
+              </li>
+            
+              <li>
+                <figure>
+                  <img src="Film Celebrities/Film Artists & Directors/శ్రీ సుమన్ గారు.png" alt="Artist 1">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">శ్రీ సుమన్ గారు</span>
+                    <span class="cap cap-en" lang="en">Mr. Suman Garu</span>
+                  </figcaption>
+                </figure>
+              </li>
+            
+              <li>
+                <figure>
+                  <img src="Film Celebrities/Film Artists & Directors/శ్రీమతి శివ పార్వతి గారు.png" alt="Artist 4">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">శ్రీమతి శివ పార్వతి గారు</span>
+                    <span class="cap cap-en" lang="en">Mrs. Shiva Parvati Garu</span>
+                  </figcaption>
+                </figure>
+              </li>
+            
+              <li>
+                <figure>
+                  <img src="Film Celebrities/Film Artists & Directors/కరాటే కళ్యాణి ,జ్యోతి గార్లు.png" alt="Artist 3">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">కరాటే కళ్యాణి ,జ్యోతి గార్లు</span>
+                    <span class="cap cap-en" lang="en">Karate Kalyani, Jyoti Garlu  Garu</span>
+                  </figcaption>
+                </figure>
+              </li>
+            
+              <li>
+                <figure>
+                  <img src="Film Celebrities/Film Artists & Directors/శ్రీ ఆలీ గారు.png" alt="Artist 4">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">శ్రీ ఆలీ గారు</span>
+                    <span class="cap cap-en" lang="en">Mr. Ali  Garu</span>
+                  </figcaption>
+                </figure>
+              </li>
+            
+              <li>
+                <figure>
+                  <img src="Film Celebrities/Film Artists & Directors/శ్రీ కళ్ళ చిదంబరం గారు.png" alt="Artist 4">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">శ్రీ కళ్ళ చిదంబరం గారు</span>
+                    <span class="cap cap-en" lang="en">Mr. Chidambaram  Garu</span>
+                  </figcaption>
+                </figure>
+              </li>
+            
+              <li>
+                <figure>
+                  <img src="Film Celebrities/Film Artists & Directors/శ్రీ ఎస్వీ కృష్ణారెడ్డి గారు శ్రీ అచ్చిరెడ్డి గారు.png" alt="Artist 4">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">శ్రీ ఎస్వీ కృష్ణారెడ్డి గారు శ్రీ అచ్చిరెడ్డి గారు</span>
+                    <span class="cap cap-en" lang="en">Mr. SV Krishna Reddy Garu.  Mr. Acchi Reddy Garu</span>
+                  </figcaption>
+                </figure>
+              </li>
+            
+              <li>
+                <figure>
+                  <img src="Film Celebrities/Film Artists & Directors/శ్రీ జేకే భారవి గారు.png" alt="Artist 4">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">శ్రీ జేకే భారవి గారు</span>
+                    <span class="cap cap-en" lang="en">Shri JK Bharavi  Garu</span>
+                  </figcaption>
+                </figure>
+              </li>
+            
+              <li>
+                <figure>
+                  <img src="Film Celebrities/Film Artists & Directors/అల్లరి సుభాషిణి గారు.png" alt="Artist 2">
+                  <figcaption>
+                    <span class="cap cap-te" lang="te">అల్లరి సుభాషిణి గారు</span>
+                    <span class="cap cap-en" lang="en">Allari Subhashini  Garu</span>
+                  </figcaption>
+                </figure>
+              </li>
+            </ul>
+            
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </ul>
+
+
+
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+    
+
+    <!-- 5) Awards & Publications -->
+    <section id="panel-awards" role="tabpanel" hidden>
+      <h2>Awards &amp; Publications</h2>
+
+      <nav class="subtabs" aria-label="Awards options" role="tablist">
+        <button class="subtab-btn active" role="tab" aria-selected="true"
+                data-subpanel="awards-awards">Awards</button>
+        <button class="subtab-btn" role="tab" aria-selected="false"
+                data-subpanel="awards-journals">Journals Published</button>
+        <button class="subtab-btn" role="tab" aria-selected="false"
+                data-subpanel="awards-Certifications">Certifications</button>
+      </nav>
+
+      <div class="subpanel-group">
+        <div id="awards-awards" class="subpanel">
+          <ul>
+
+
+
+
+
+
+
+
+
+
+
+
+            <ul class="avatar-grid">
+
+
+
+              <li class="playlist-card">
+                <a class="playlist-link"
+                   href="https://www.youtube.com/playlist?list=PL2T1fjpT1Uqeay9A_lvIgHZ_QTJ4o0bVm"
+                   target="_blank" rel="noopener">
+                  <!-- Icon: uses inline SVG; if you already load Devicon, you can replace this with:
+                       <i class="devicon-youtube-plain"></i> -->
+                  <span class="playlist-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="28" height="28" role="img">
+                      <path d="M23.5 6.2a4 4 0 0 0-2.8-2.8C18.9 3 12 3 12 3s-6.9 0-8.7.4A4 4 0 0 0 .5 6.2 41.6 41.6 0 0 0 0 12a41.6 41.6 0 0 0 .5 5.8 4 4 0 0 0 2.8 2.8C5.1 21 12 21 12 21s6.9 0 8.7-.4a4 4 0 0 0 2.8-2.8A41.6 41.6 0 0 0 24 12a41.6 41.6 0 0 0-.5-5.8Z" fill="#ff0000"/>
+                      <path d="M9.75 8.5v7l6-3.5-6-3.5z" fill="#fff"/>
+                    </svg>
+                  </span>
+              
+                  <span class="playlist-text">
+                    <span class="playlist-title">Awards – YouTube Playlist</span>
+                    <span class="playlist-sub">All award videos • opens in new tab</span>
+                  </span>
+              
+                  <span class="playlist-cta" aria-hidden="true">Play</span>
+                </a>
+              </li>
+              
+
+
+
+
+
+
+              
+
+              <figure class="award-card">
+                <a class="yt-fab"
+                   href="https://www.youtube.com/watch?v=XXXXXXXX"
+                   target="_blank" rel="noopener"
+                   aria-label="Watch video on YouTube">
+                  <svg viewBox="0 0 24 24" class="yt-fab-icon" aria-hidden="true">
+                    <circle cx="12" cy="12" r="11" fill="#ff0000"/>
+                    <path d="M9.5 7.8v8.4l7-4.2-7-4.2z" fill="#fff"/>
+                  </svg>
+                </a>
+              
+                <img src="Awards & Publications/Awards/గౌరవ డాక్టరేట్.png" alt="గౌరవ డాక్టరేట్">
+              
+                <figcaption class="cap-row">
+                  <span class="cap-spacer" aria-hidden="true"></span>
+                  <span class="cap cap-te" lang="te">గౌరవ డాక్టరేట్</span>
+                  <span class="cap cap-en" lang="en">Honorary Doctorate</span>
+                  <span class="cap-spacer" aria-hidden="true"></span>
+                </figcaption>
+              </figure>
+              
+
+
+
+
+
+
+              <li>
+                <figure class="award-card">
+                  <a class="yt-fab"
+                     href="https://www.youtube.com/watch?v=XXXXXXXX"  
+                     target="_blank" rel="noopener"
+                     aria-label="Watch video on YouTube">
+                    <svg viewBox="0 0 24 24" class="yt-fab-icon" aria-hidden="true">
+                      <circle cx="12" cy="12" r="11" fill="#ff0000"></circle>
+                      <path d="M9.5 7.8v8.4l7-4.2-7-4.2z" fill="#fff"></path>
+                    </svg>
+                  </a>
+              
+                  <img src="Awards & Publications/Awards/కళారత్న( హంస అవార్డు).png" alt="కళారత్న (హంస అవార్డు)">
+              
+                  <figcaption class="cap-row">
+                    <span class="cap-spacer" aria-hidden="true"></span>
+                    <span class="cap cap-te" lang="te">కళారత్న (హంస అవార్డు - 2025)</span>
+                    <span class="cap cap-en" lang="en">Kalarathna (Hamsa Award - 2025)</span>
+                    <span class="cap-spacer" aria-hidden="true"></span>
+                  </figcaption>
+                </figure>
+              </li>
+              
+
+
+
+
+
+              <li>
+                <figure class="award-card">
+                  <a class="yt-fab"
+                     href="https://www.youtube.com/watch?v=XXXXXXXX"  
+                     target="_blank" rel="noopener"
+                     aria-label="Watch video on YouTube">
+                    <svg viewBox="0 0 24 24" class="yt-fab-icon" aria-hidden="true">
+                      <circle cx="12" cy="12" r="11" fill="#ff0000"></circle>
+                      <path d="M9.5 7.8v8.4l7-4.2-7-4.2z" fill="#fff"></path>
+                    </svg>
+                  </a>
+              
+                  <img src="Awards & Publications/Awards/హెచ్ సి ఎం అవార్డు.png" alt="హెచ్ సి ఎం అవార్డు">
+              
+                  <figcaption class="cap-row">
+                    <span class="cap-spacer" aria-hidden="true"></span>
+                    <span class="cap cap-te" lang="te">హెచ్ సి ఎం అవార్డు</span>
+                    <span class="cap cap-en" lang="en">HCM Award </span>
+                    <span class="cap-spacer" aria-hidden="true"></span>
+                  </figcaption>
+                </figure>
+              </li>
+
+              
+
+              <li>
+                <figure class="award-card">
+                  <a class="yt-fab"
+                     href="https://www.youtube.com/watch?v=XXXXXXXX"  
+                     target="_blank" rel="noopener"
+                     aria-label="Watch video on YouTube">
+                    <svg viewBox="0 0 24 24" class="yt-fab-icon" aria-hidden="true">
+                      <circle cx="12" cy="12" r="11" fill="#ff0000"></circle>
+                      <path d="M9.5 7.8v8.4l7-4.2-7-4.2z" fill="#fff"></path>
+                    </svg>
+                  </a>
+              
+                  <img src="Awards & Publications/Awards/జాతీయ బంగారు నంది పురస్కారం.png" alt="జాతీయ బంగారు నంది పురస్కారం">
+              
+                  <figcaption class="cap-row">
+                    <span class="cap-spacer" aria-hidden="true"></span>
+                    <span class="cap cap-te" lang="te">జాతీయ బంగారు నంది పురస్కారం</span>
+                    <span class="cap cap-en" lang="en">National Gold Nandi Award</span>
+                    <span class="cap-spacer" aria-hidden="true"></span>
+                  </figcaption>
+                </figure>
+              </li>
+              
+            
+
+
+
+
+              <li>
+                <figure class="award-card">
+                  <a class="yt-fab"
+                     href="https://www.youtube.com/watch?v=XXXXXXXX" 
+                     target="_blank" rel="noopener"
+                     aria-label="Watch video on YouTube">
+                    <svg viewBox="0 0 24 24" class="yt-fab-icon" aria-hidden="true">
+                      <circle cx="12" cy="12" r="11" fill="#ff0000"></circle>
+                      <path d="M9.5 7.8v8.4l7-4.2-7-4.2z" fill="#fff"></path>
+                    </svg>
+                  </a>
+              
+                  <img src="Awards & Publications/Awards/భారత కళా రత్న అవార్డు.png" alt="భారత కళా రత్న అవార్డు">
+              
+                  <figcaption class="cap-row">
+                    <span class="cap-spacer" aria-hidden="true"></span>
+                    <span class="cap cap-te" lang="te">భారత కళా రత్న అవార్డు</span>
+                    <span class="cap cap-en" lang="en">Bharat Kala Rathna Award</span>
+                    <span class="cap-spacer" aria-hidden="true"></span>
+                  </figcaption>
+                </figure>
+              </li>
+              
+            
+
+
+
+
+
+
+              <li>
+                <figure class="award-card">
+                  <a class="yt-fab"
+                     href="https://www.youtube.com/watch?v=XXXXXXXX"  
+                     target="_blank" rel="noopener"
+                     aria-label="Watch video on YouTube">
+                    <svg viewBox="0 0 24 24" class="yt-fab-icon" aria-hidden="true">
+                      <circle cx="12" cy="12" r="11" fill="#ff0000"></circle>
+                      <path d="M9.5 7.8v8.4l7-4.2-7-4.2z" fill="#fff"></path>
+                    </svg>
+                  </a>
+              
+                  <img src="Awards & Publications/Awards/రజిత కిరీట ధారణ.png" alt="రజిత కిరీట ధారణ">
+              
+                  <figcaption class="cap-row">
+                    <span class="cap-spacer" aria-hidden="true"></span>
+                    <span class="cap cap-te" lang="te">రజిత కిరీట ధారణ</span>
+                    <span class="cap cap-en" lang="en">Rajita Kirita Dharana </span>
+                    <span class="cap-spacer" aria-hidden="true"></span>
+                  </figcaption>
+                </figure>
+              </li>
+              
+            
+
+
+
+
+
+
+              <li>
+                <figure class="award-card">
+                  <a class="yt-fab"
+                     href="https://www.youtube.com/watch?v=XXXXXXXX"  
+                     target="_blank" rel="noopener"
+                     aria-label="Watch video on YouTube">
+                    <svg viewBox="0 0 24 24" class="yt-fab-icon" aria-hidden="true">
+                      <circle cx="12" cy="12" r="11" fill="#ff0000"></circle>
+                      <path d="M9.5 7.8v8.4l7-4.2-7-4.2z" fill="#fff"></path>
+                    </svg>
+                  </a>
+              
+                  <img src="Awards & Publications/Awards/స్వర్ణ కంకణ ఘన సన్మానo-2010,ఏలూరు.png" alt="స్వర్ణ కంకణ ఘన సన్మానo-2010, ఏలూరు">
+              
+                  <figcaption class="cap-row">
+                    <span class="cap-spacer" aria-hidden="true"></span>
+                    <span class="cap cap-te" lang="te">స్వర్ణ కంకణ ఘన సన్మానo-2010, ఏలూరు</span>
+                    <span class="cap cap-en" lang="en">Swarna Kankana Ghana Sanmanao-2010, Eluru</span>
+                    <span class="cap-spacer" aria-hidden="true"></span>
+                  </figcaption>
+                </figure>
+              </li>
+              
+            
+
+
+
+              <li>
+                <figure class="award-card">
+                  <a class="yt-fab"
+                     href="https://www.youtube.com/watch?v=XXXXXXXX"  
+                     target="_blank" rel="noopener"
+                     aria-label="Watch video on YouTube">
+                    <svg viewBox="0 0 24 24" class="yt-fab-icon" aria-hidden="true">
+                      <circle cx="12" cy="12" r="11" fill="#ff0000"></circle>
+                      <path d="M9.5 7.8v8.4l7-4.2-7-4.2z" fill="#fff"></path>
+                    </svg>
+                  </a>
+              
+                  <img src="Awards & Publications/Awards/సువర్ణ హస్త కంకణ ఘన సన్మానం-2023, అనకాపల్లి..png" alt="సువర్ణ హస్త కంకణ ఘన సన్మానం – 2023, అనకాపల్లి">
+              
+                  <figcaption class="cap-row">
+                    <span class="cap-spacer" aria-hidden="true"></span>
+                    <span class="cap cap-te" lang="te">సువర్ణ హస్త కంకణ ఘన సన్మానం – 2023, అనకాపల్లి</span>
+                    <span class="cap cap-en" lang="en">Suvarna Hasta Kankana Ghana Sanmanam-2023, Anakapalli</span>
+                    <span class="cap-spacer" aria-hidden="true"></span>
+                  </figcaption>
+                </figure>
+              </li>
+              
+
+
+
+
+
+              <li>
+                <figure class="award-card">
+                  <a class="yt-fab"
+                     href="https://www.youtube.com/watch?v=XXXXXXXX" 
+                     target="_blank" rel="noopener"
+                     aria-label="Watch video on YouTube">
+                    <svg viewBox="0 0 24 24" class="yt-fab-icon" aria-hidden="true">
+                      <circle cx="12" cy="12" r="11" fill="#ff0000"></circle>
+                      <path d="M9.5 7.8v8.4l7-4.2-7-4.2z" fill="#fff"></path>
+                    </svg>
+                  </a>
+              
+                  <img src="Awards & Publications/Awards/లింకా బుక్ అవార్డు.png" alt="లింకా బుక్ అవార్డు">
+              
+                  <figcaption class="cap-row">
+                    <span class="cap-spacer" aria-hidden="true"></span>
+                    <span class="cap cap-te" lang="te">లింకా బుక్ అవార్డు</span>
+                    <span class="cap cap-en" lang="en">Linca Book Award</span>
+                    <span class="cap-spacer" aria-hidden="true"></span>
+                  </figcaption>
+                </figure>
+              </li>
+              
+              <li>
+                <figure class="award-card">
+                  <a class="yt-fab"
+                     href="https://www.youtube.com/watch?v=XXXXXXXX" 
+                     target="_blank" rel="noopener"
+                     aria-label="Watch video on YouTube">
+                    <svg viewBox="0 0 24 24" class="yt-fab-icon" aria-hidden="true">
+                      <circle cx="12" cy="12" r="11" fill="#ff0000"></circle>
+                      <path d="M9.5 7.8v8.4l7-4.2-7-4.2z" fill="#fff"></path>
+                    </svg>
+                  </a>
+              
+                  <img src="Awards & Publications/Awards/హరికథారత్న బిరుదు ప్రధానం.png" alt="హరికథారత్న బిరుదు ప్రధానం">
+              
+                  <figcaption class="cap-row">
+                    <span class="cap-spacer" aria-hidden="true"></span>
+                    <span class="cap cap-te" lang="te">హరికథారత్న బిరుదు ప్రధానం</span>
+                    <span class="cap cap-en" lang="en">Harikatha Rathna Award</span>
+                    <span class="cap-spacer" aria-hidden="true"></span>
+                  </figcaption>
+                </figure>
+              </li>
+              
+              <li>
+                <figure class="award-card">
+                  <a class="yt-fab"
+                     href="https://www.youtube.com/watch?v=XXXXXXXX"  
+                     target="_blank" rel="noopener"
+                     aria-label="Watch video on YouTube">
+                    <svg viewBox="0 0 24 24" class="yt-fab-icon" aria-hidden="true">
+                      <circle cx="12" cy="12" r="11" fill="#ff0000"></circle>
+                      <path d="M9.5 7.8v8.4l7-4.2-7-4.2z" fill="#fff"></path>
+                    </svg>
+                  </a>
+              
+                  <img src="Awards & Publications/Awards/హరికథా సరస్వతి బిరుదు ప్రధానం.png" alt="హరికథా సరస్వతి బిరుదు ప్రధానం">
+              
+                  <figcaption class="cap-row">
+                    <span class="cap-spacer" aria-hidden="true"></span>
+                    <span class="cap cap-te" lang="te">హరికథా సరస్వతి బిరుదు ప్రధానం</span>
+                    <span class="cap cap-en" lang="en">Harikatha Sarasvati Award</span>
+                    <span class="cap-spacer" aria-hidden="true"></span>
+                  </figcaption>
+                </figure>
+              </li>
+              
+
+
+
+
+
+
+
+
+
+              <li>
+                <figure class="award-card">
+                  <a class="yt-fab"
+                     href="https://www.youtube.com/watch?v=XXXXXXXX"  
+                     target="_blank" rel="noopener"
+                     aria-label="Watch video on YouTube">
+                    <svg viewBox="0 0 24 24" class="yt-fab-icon" aria-hidden="true">
+                      <circle cx="12" cy="12" r="11" fill="#ff0000"></circle>
+                      <path d="M9.5 7.8v8.4l7-4.2-7-4.2z" fill="#fff"></path>
+                    </svg>
+                  </a>
+              
+                  <img src="Awards & Publications/Awards/హరికథా భారతి బిరుదు ప్రధానం.png" alt="హరికథా భారతి బిరుదు ప్రధానం">
+              
+                  <figcaption class="cap-row">
+                    <span class="cap-spacer" aria-hidden="true"></span>
+                    <span class="cap cap-te" lang="te">హరికథా భారతి బిరుదు ప్రధానం</span>
+                    <span class="cap cap-en" lang="en">Sakala Kalabharati Harikatha Bharathi Award</span>
+                    <span class="cap-spacer" aria-hidden="true"></span>
+                  </figcaption>
+                </figure>
+              </li>
+              
+              <li>
+                <figure class="award-card">
+                  <a class="yt-fab"
+                     href="https://www.youtube.com/watch?v=XXXXXXXX"  
+                     target="_blank" rel="noopener"
+                     aria-label="Watch video on YouTube">
+                    <svg viewBox="0 0 24 24" class="yt-fab-icon" aria-hidden="true">
+                      <circle cx="12" cy="12" r="11" fill="#ff0000"></circle>
+                      <path d="M9.5 7.8v8.4l7-4.2-7-4.2z" fill="#fff"></path>
+                    </svg>
+                  </a>
+              
+                  <img src="Awards & Publications/Awards/హరికథ చూడామణి బిరుదు ప్రధానం.png" alt="హరికథ చూడామణి బిరుదు ప్రధానం">
+              
+                  <figcaption class="cap-row">
+                    <span class="cap-spacer" aria-hidden="true"></span>
+                    <span class="cap cap-te" lang="te">హరికథ చూడామణి బిరుదు ప్రధానం</span>
+                    <span class="cap cap-en" lang="en">Harikatha Cudamani Award</span>
+                    <span class="cap-spacer" aria-hidden="true"></span>
+                  </figcaption>
+                </figure>
+              </li>
+              
+              <li>
+                <figure class="award-card">
+                  <a class="yt-fab"
+                     href="https://www.youtube.com/watch?v=XXXXXXXX"  
+                     target="_blank" rel="noopener"
+                     aria-label="Watch video on YouTube">
+                    <svg viewBox="0 0 24 24" class="yt-fab-icon" aria-hidden="true">
+                      <circle cx="12" cy="12" r="11" fill="#ff0000"></circle>
+                      <path d="M9.5 7.8v8.4l7-4.2-7-4.2z" fill="#fff"></path>
+                    </svg>
+                  </a>
+              
+                  <img src="Awards & Publications/Awards/హరికథ గాన ప్రపూర్ణ బిరుదు ప్రధానం.png" alt="హరికథ గాన ప్రపూర్ణ బిరుదు ప్రధానం">
+              
+                  <figcaption class="cap-row">
+                    <span class="cap-spacer" aria-hidden="true"></span>
+                    <span class="cap cap-te" lang="te">హరికథ గాన ప్రపూర్ణ బిరుదు ప్రధానం</span>
+                    <span class="cap cap-en" lang="en">Harikatha Gana Prapurna Award</span>
+                    <span class="cap-spacer" aria-hidden="true"></span>
+                  </figcaption>
+                </figure>
+              </li>
+
+
+
+              
+
+
+
+
+
+
+              <li>
+                <figure class="award-card">
+                  <a class="yt-fab"
+                     href="https://www.youtube.com/watch?v=XXXXXXXX"  
+                     target="_blank" rel="noopener"
+                     aria-label="Watch video on YouTube">
+                    <svg viewBox="0 0 24 24" class="yt-fab-icon" aria-hidden="true">
+                      <circle cx="12" cy="12" r="11" fill="#ff0000"></circle>
+                      <path d="M9.5 7.8v8.4l7-4.2-7-4.2z" fill="#fff"></path>
+                    </svg>
+                  </a>
+              
+                  <img src="Awards & Publications/Awards/శ్రీ సర్వారాయ హరికథ పాఠశాల, వెండి కంకణ ధారణ.png" alt="శ్రీ సర్వారాయ హరికథ పాఠశాల, వెండి కంకణ ధారణ">
+              
+                  <figcaption class="cap-row">
+                    <span class="cap-spacer" aria-hidden="true"></span>
+                    <span class="cap cap-te" lang="te">శ్రీ సర్వారాయ హరికథ పాఠశాల, వెండి కంకణ ధారణ</span>
+                    <span class="cap cap-en" lang="en"> Sri Sarvaraya Harikatha Pathasala Vendi Kankana Dharana</span>
+                    <span class="cap-spacer" aria-hidden="true"></span>
+                  </figcaption>
+                </figure>
+              </li>
+              
+              <li>
+                <figure class="award-card">
+                  <a class="yt-fab"
+                     href="https://www.youtube.com/watch?v=XXXXXXXX"  
+                     target="_blank" rel="noopener"
+                     aria-label="Watch video on YouTube">
+                    <svg viewBox="0 0 24 24" class="yt-fab-icon" aria-hidden="true">
+                      <circle cx="12" cy="12" r="11" fill="#ff0000"></circle>
+                      <path d="M9.5 7.8v8.4l7-4.2-7-4.2z" fill="#fff"></path>
+                    </svg>
+                  </a>
+              
+                  <img src="Awards & Publications/Awards/శ్రీ స్వామి వివేకానంద ఎక్సలెన్సీ అవార్డు.png" alt="శ్రీ స్వామి వివేకానంద ఎక్సలెన్సీ అవార్డు">
+              
+                  <figcaption class="cap-row">
+                    <span class="cap-spacer" aria-hidden="true"></span>
+                    <span class="cap cap-te" lang="te">శ్రీ స్వామి వివేకానంద ఎక్సలెన్సీ అవార్డు</span>
+                    <span class="cap cap-en" lang="en">Sri Swami Vivekanada Excellence Award</span>
+                    <span class="cap-spacer" aria-hidden="true"></span>
+                  </figcaption>
+                </figure>
+              </li>
+              
+              <li>
+                <figure class="award-card">
+                  <a class="yt-fab"
+                     href="https://www.youtube.com/watch?v=XXXXXXXX"  
+                     target="_blank" rel="noopener"
+                     aria-label="Watch video on YouTube">
+                    <svg viewBox="0 0 24 24" class="yt-fab-icon" aria-hidden="true">
+                      <circle cx="12" cy="12" r="11" fill="#ff0000"></circle>
+                      <path d="M9.5 7.8v8.4l7-4.2-7-4.2z" fill="#fff"></path>
+                    </svg>
+                  </a>
+              
+                  <img src="Awards & Publications/Awards/బంగారు చైను తో సత్కారం.png" alt="బంగారు చైను తో సత్కారం">
+              
+                  <figcaption class="cap-row">
+                    <span class="cap-spacer" aria-hidden="true"></span>
+                    <span class="cap cap-te" lang="te">బంగారు చైను తో సత్కారం</span>
+                    <span class="cap cap-en" lang="en">Bangaru  Chain  Satkaram</span>
+                    <span class="cap-spacer" aria-hidden="true"></span>
+                  </figcaption>
+                </figure>
+              </li>
+              
+            
+
+
+
+
+
+
+
+
+
+              <li>
+                <figure class="award-card">
+                  <a class="yt-fab"
+                     href="https://www.youtube.com/watch?v=XXXXXXXX"  
+                     target="_blank" rel="noopener"
+                     aria-label="Watch video on YouTube">
+                    <svg viewBox="0 0 24 24" class="yt-fab-icon" aria-hidden="true">
+                      <circle cx="12" cy="12" r="11" fill="#ff0000"></circle>
+                      <path d="M9.5 7.8v8.4l7-4.2-7-4.2z" fill="#fff"></path>
+                    </svg>
+                  </a>
+              
+                  <img src="Awards & Publications/Awards/నాట్య మయూరి బిరుదు ప్రధానం.png" alt="నాట్య మయూరి బిరుదు ప్రధానం">
+              
+                  <figcaption class="cap-row">
+                    <span class="cap-spacer" aria-hidden="true"></span>
+                    <span class="cap cap-te" lang="te">నాట్య మయూరి బిరుదు ప్రధానం</span>
+                    <span class="cap cap-en" lang="en">Natya Mayuri  Award</span>
+                    <span class="cap-spacer" aria-hidden="true"></span>
+                  </figcaption>
+                </figure>
+              </li>
+              
+              <li>
+                <figure class="award-card">
+                  <a class="yt-fab"
+                     href="https://www.youtube.com/watch?v=XXXXXXXX"  
+                     target="_blank" rel="noopener"
+                     aria-label="Watch video on YouTube">
+                    <svg viewBox="0 0 24 24" class="yt-fab-icon" aria-hidden="true">
+                      <circle cx="12" cy="12" r="11" fill="#ff0000"></circle>
+                      <path d="M9.5 7.8v8.4l7-4.2-7-4.2z" fill="#fff"></path>
+                    </svg>
+                  </a>
+              
+                  <img src="Awards & Publications/Awards/సకల కళాభారతి.png" alt="సకల కళాభారతి">
+              
+                  <figcaption class="cap-row">
+                    <span class="cap-spacer" aria-hidden="true"></span>
+                    <span class="cap cap-te" lang="te">సకల కళాభారతి</span>
+                    <span class="cap cap-en" lang="en">Sakala Kalabharati</span>
+                    <span class="cap-spacer" aria-hidden="true"></span>
+                  </figcaption>
+                </figure>
+              </li>
+              
+              <li>
+                <figure class="award-card">
+                  <a class="yt-fab"
+                     href="https://www.youtube.com/watch?v=XXXXXXXX" 
+                     target="_blank" rel="noopener"
+                     aria-label="Watch video on YouTube">
+                    <svg viewBox="0 0 24 24" class="yt-fab-icon" aria-hidden="true">
+                      <circle cx="12" cy="12" r="11" fill="#ff0000"></circle>
+                      <path d="M9.5 7.8v8.4l7-4.2-7-4.2z" fill="#fff"></path>
+                    </svg>
+                  </a>
+              
+                  <img src="Awards & Publications/Awards/హరికథాగాన ప్రవీణ బిరుదు ప్రధానo.png" alt="హరికథాగాన ప్రవీణ బిరుదు ప్రధానo">
+              
+                  <figcaption class="cap-row">
+                    <span class="cap-spacer" aria-hidden="true"></span>
+                    <span class="cap cap-te" lang="te">హరికథాగాన ప్రవీణ బిరుదు ప్రధానo</span>
+                    <span class="cap cap-en" lang="en"></span>
+                    <span class="cap-spacer" aria-hidden="true"></span>
+                  </figcaption>
+                </figure>
+              </li>
+              
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <li>
+                <figure class="award-card">
+                  <a class="yt-fab"
+                     href="https://www.youtube.com/watch?v=XXXXXXXX"  
+                     target="_blank" rel="noopener"
+                     aria-label="Watch video on YouTube">
+                    <svg viewBox="0 0 24 24" class="yt-fab-icon" aria-hidden="true">
+                      <circle cx="12" cy="12" r="11" fill="#ff0000"></circle>
+                      <path d="M9.5 7.8v8.4l7-4.2-7-4.2z" fill="#fff"></path>
+                    </svg>
+                  </a>
+              
+                  <img src="Awards & Publications/Awards/ఆత్మీయ సత్కార సన్మాన పత్రంశ్రీ శ్రీ రామ రక్షా సేవా సంఘం.png" alt="ఆత్మీయ సత్కార సన్మాన పత్రం – శ్రీ శ్రీ రామ రక్షా సేవా సంఘం">
+              
+                  <figcaption class="cap-row">
+                    <span class="cap-spacer" aria-hidden="true"></span>
+                    <span class="cap cap-te" lang="te">ఆత్మీయ సత్కార సన్మాన పత్రం – శ్రీ శ్రీ రామ రక్షా సేవా సంఘం</span>
+                    <span class="cap cap-en" lang="en"></span>
+                    <span class="cap-spacer" aria-hidden="true"></span>
+                  </figcaption>
+                </figure>
+              </li>
+              
+              <li>
+                <figure class="award-card">
+                  <a class="yt-fab"
+                     href="https://www.youtube.com/watch?v=XXXXXXXX"  
+                     target="_blank" rel="noopener"
+                     aria-label="Watch video on YouTube">
+                    <svg viewBox="0 0 24 24" class="yt-fab-icon" aria-hidden="true">
+                      <circle cx="12" cy="12" r="11" fill="#ff0000"></circle>
+                      <path d="M9.5 7.8v8.4l7-4.2-7-4.2z" fill="#fff"></path>
+                    </svg>
+                  </a>
+              
+                  <img src="Awards & Publications/Awards/అనర్గళ కంఠామృతం.png" alt="అనర్గళ కంఠామృతం">
+              
+                  <figcaption class="cap-row">
+                    <span class="cap-spacer" aria-hidden="true"></span>
+                    <span class="cap cap-te" lang="te">అనర్గళ కంఠామృతం</span>
+                    <span class="cap cap-en" lang="en"></span>
+                    <span class="cap-spacer" aria-hidden="true"></span>
+                  </figcaption>
+                </figure>
+              </li>
+              
+
+
+
+
+
+            </ul>
+            
+
+          </ul>
+        </div>
+
+
+
+
+
+
+        <div id="awards-journals" class="subpanel" hidden>
+          <ul class="link-list">
+            
+            <li>
+              <!-- Option A: <object> (best for built-in PDF viewers) -->
+              <object
+                data="Awards & Publications/Journals Published-ENG.docx.pdf"   
+                type="application/pdf"
+                style="width:100%; height:85vh; border:0;">
+                <!-- Fallback if PDF cannot render -->
+                <p>
+                  This PDF can’t be displayed in your browser.
+                  <a href="Awards & Publications/Journals Published-ENG.docx.pdf" download>Download the PDF</a>
+                </p>
+              </object>
+            </li>
+
+
+          </ul>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <div id="awards-Certifications" class="subpanel" hidden>
+          <ul>
+
+            <li>
+              <!-- Option A: <object> (best for built-in PDF viewers) -->
+              <object
+                data="Awards & Publications/Certificates of AppreciationENG.pdf"   
+                type="application/pdf"
+                style="width:100%; height:85vh; border:0;">
+                <!-- Fallback if PDF cannot render -->
+                <p>
+                  This PDF can’t be displayed in your browser.
+                  <a href="Awards & Publications/Certificates of AppreciationENG.pdf" download>Download the PDF</a>
+                </p>
+              </object>
+            </li>
+
+
+
+          </ul>
+        </div>
+
+
+
+
+
+      </div>
+    </section>
+    <section id="panel-media" role="tabpanel">
+      <h2 class="media-title">Media &amp; Outreach</h2>
+    
+      <div class="media-grid pro">
+        <a class="media-card pro" href="https://www.youtube.com/@sappabharathibhagavatarini" target="_blank" rel="noopener" aria-label="YouTube">
+          <span class="icon-badge yt"><i class="fa-brands fa-youtube"></i></span>
+          <span class="label">YouTube</span>
+        </a>
+    
+        <a class="media-card pro" href="https://www.facebook.com/profile.php?id=100008436812038" target="_blank" rel="noopener" aria-label="Facebook">
+          <span class="icon-badge fb"><i class="fa-brands fa-facebook-f"></i></span>
+          <span class="label">Facebook</span>
+        </a>
+    
+        <a class="media-card pro" href="https://chat.whatsapp.com/KitCWyU1JwjIKPjZOBWe7g" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <span class="icon-badge wa"><i class="fa-brands fa-whatsapp"></i></span>
+          <span class="label">WhatsApp</span>
+        </a>
+    
+        <a class="media-card pro" href="https://www.instagram.com/sappa_bharathi/" target="_blank" rel="noopener" aria-label="Instagram">
+          <span class="icon-badge ig"><i class="fa-brands fa-instagram"></i></span>
+          <span class="label">Instagram</span>
+        </a>
+    
+        <a class="media-card pro" href="https://t.me/sappabharathibhagavatariniyt" target="_blank" rel="noopener" aria-label="Telegram">
+          <span class="icon-badge tg"><i class="fa-brands fa-telegram"></i></span>
+          <span class="label">Telegram</span>
+        </a>
+    
+        <a class="media-card pro" href="mailto:sappabharathi@gmail.com" aria-label="Email">
+          <span class="icon-badge em"><i class="fa-solid fa-envelope"></i></span>
+          <span class="label">Email</span>
+        </a>
+    
+        <a class="media-card pro" href="https://sappabharathibhagavatarini.blogspot.com/2021/08/sappa-bharathi-bhagavatarini-photos.html" target="_blank" rel="noopener" aria-label="Website / Bio">
+          <span class="icon-badge web"><i class="fa-solid fa-globe"></i></span>
+          <span class="label">Website / Bio</span>
+        </a>
+    
+        <a class="media-card pro" href="https://twitter.com/" target="_blank" rel="noopener" aria-label="Twitter / X">
+          <span class="icon-badge x"><i class="fa-brands fa-x-twitter"></i></span>
+          <span class="label">Twitter / X</span>
+        </a>
+      </div>
+    </section>
+    
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
