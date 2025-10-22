@@ -254,3 +254,40 @@ document.getElementById('btn-te')?.addEventListener('click', () => {
   const pane = document.getElementById('lang-te');
   setTimeout(() => _scrollToTopOf(pane), 0);
 });
+
+
+// Mobile-friendly auto-scroll for tabs & subtabs (works without HTML changes)
+(function () {
+  const css = getComputedStyle(document.documentElement);
+  const offset = () => (parseFloat(css.getPropertyValue('--topbar-h')) || 0)
+                        + (parseFloat(css.getPropertyValue('--content-gap')) || 0)
+                        + 6;
+
+  function jump(el){
+    if (!el) return;
+    const y = el.getBoundingClientRect().top + window.pageYOffset - offset();
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  }
+
+  // Top tabs
+  document.addEventListener('click', (e) => {
+    const tab = e.target.closest('.dock-btn');
+    if (!tab) return;
+    // let your existing handlers run first
+    requestAnimationFrame(() => {
+      const pane = document.getElementById(tab.dataset.panel);
+      jump(pane);
+    });
+  }, true);
+
+  // Subtabs / subsections
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.subtab-btn');
+    if (!btn) return;
+    requestAnimationFrame(() => {
+      const group  = btn.closest('.subtabs')?.nextElementSibling; // .subpanel-group
+      const target = btn.dataset.subpanel ? group?.querySelector('#' + btn.dataset.subpanel) : group;
+      jump(target || group);
+    });
+  }, true);
+})();
