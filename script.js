@@ -198,3 +198,59 @@ btnTE.addEventListener('click', () => {
   langEN.style.display = 'none';
 });
 
+
+
+
+
+
+/* === Auto-scroll to the top of the (sub)section just opened === */
+
+/* Figure out fixed-header offset from your CSS vars */
+function _getStickyOffset() {
+  const cs   = getComputedStyle(document.documentElement);
+  const top  = parseFloat(cs.getPropertyValue('--topbar-h')) || 0;
+  const gap  = parseFloat(cs.getPropertyValue('--content-gap')) || 0;
+  return top + gap + 6; // a tiny breathing room
+}
+
+/* Smoothly scroll an element to the top of the viewport (minus offset) */
+function _scrollToTopOf(el) {
+  if (!el) return;
+  const y = el.getBoundingClientRect().top + window.scrollY - _getStickyOffset();
+  window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+}
+
+/* 1) Patch your existing showPanel() so every top tab switch scrolls */
+if (typeof showPanel === 'function') {
+  const _origShowPanel = showPanel;
+  showPanel = function(id, btn) {
+    _origShowPanel(id, btn);
+    const pane = document.getElementById(id);
+    _scrollToTopOf(pane);
+  };
+}
+
+/* 2) When any subtab is clicked, scroll to the active subpanel (or its group) */
+document.addEventListener('click', (e) => {
+  const btn = e.target.closest('.subtab-btn');
+  if (!btn) return;
+
+  // after your existing subtab code toggles, scroll the right thing
+  setTimeout(() => {
+    const group = btn.closest('.subtabs')?.nextElementSibling; // .subpanel-group
+    const target = btn.dataset.subpanel
+      ? group?.querySelector('#' + btn.dataset.subpanel)
+      : group;
+    _scrollToTopOf(target || group);
+  }, 0);
+});
+
+/* 3) Language toggle also jumps to the top of the visible language block */
+document.getElementById('btn-en')?.addEventListener('click', () => {
+  const pane = document.getElementById('lang-en');
+  setTimeout(() => _scrollToTopOf(pane), 0);
+});
+document.getElementById('btn-te')?.addEventListener('click', () => {
+  const pane = document.getElementById('lang-te');
+  setTimeout(() => _scrollToTopOf(pane), 0);
+});
