@@ -291,3 +291,76 @@ document.getElementById('btn-te')?.addEventListener('click', () => {
     });
   }, true);
 })();
+
+
+
+(function () {
+  // Only try on phones
+  if (!window.matchMedia('(max-width: 768px)').matches) return;
+
+  // If PDF.js missing, keep <object> as-is
+  if (!window.pdfjsLib) return;
+
+  const DPR = Math.min(window.devicePixelRatio || 1, 2);
+
+  // Helper: encode a relative URL with spaces/& etc.
+  function safeURL(url) {
+    try { return encodeURI(url); } catch { return url; }
+  }
+
+  const containers = Array.from(document.querySelectorAll('.pdf-view[data-pdf]'));
+  if (containers.length === 0) return;
+
+  // Render all PDFs; if at least one page renders, mark pdf-ready
+  let firstPageRendered = false;
+
+  async function renderOne(wrap) {
+    const src = wrap.getAttribute('data-pdf');
+    if (!src) return;
+    const url = safeURL(src);
+
+    try {
+      const pdf = await pdfjsLib.getDocument({ url }).promise;
+      const total = pdf.numPages;
+
+      for (let p = 1; p <= total; p++) {
+        const page = await pdf.getPage(p);
+        const viewport = page.getViewport({ scale: 1 });
+
+        const targetWidth = wrap.clientWidth || window.innerWidth;
+        const scale = targetWidth / viewport.width;
+        const scaledVp = page.getViewport({ scale });
+
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width  = Math.floor(scaledVp.width  * DPR);
+        canvas.height = Math.floor(scaledVp.height * DPR);
+        canvas.style.width  = scaledVp.width + 'px';
+        canvas.style.height = scaledVp.height + 'px';
+
+        await page.render({
+          canvasContext: ctx,
+          viewport: scaledVp,
+          transform: [DPR, 0, 0, DPR, 0, 0],
+        }).promise;
+
+        wrap.appendChild(canvas);
+
+        if (!firstPageRendered) {
+          firstPageRendered = true;
+          document.body.classList.add('pdf-ready'); // now hide <object>, show canvases
+        }
+      }
+    } catch (e) {
+      // Fallback link if rendering fails
+      wrap.innerHTML = `
+        <p style="color:#fff;padding:8px">
+          Could not render PDF. <a href="${url}" style="color:#fff;text-decoration:underline">Open</a>
+        </p>`;
+      console.error('PDF render failed:', e);
+    }
+  }
+
+  containers.forEach(renderOne);
+})();
