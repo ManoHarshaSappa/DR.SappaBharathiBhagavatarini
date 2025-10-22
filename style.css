@@ -1443,24 +1443,42 @@ figcaption { margin-top: 8px; line-height: 1.35; }
   /* Your existing caption row still works */
   
 
-
-  /* Mobile-friendly PDF scroller */
-.pdf-wrap {
-  height: calc(100svh - var(--sticky-offset, 72px)); /* uses safe viewport on mobile */
+/* PDF areas */
+.pdf-wrap,
+.pdf-view {
+  height: calc(100svh - var(--sticky-offset, 72px));
+  min-height: 60vh;
   overflow: auto;
-  -webkit-overflow-scrolling: touch;  /* momentum scroll on iOS */
-  overscroll-behavior: contain;       /* avoid scroll chaining to body */
-  background: #000;                   /* optional: black backdrop for PDFs */
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  background: #000;
   border: 0;
+}
+.pdf-wrap > object { width: 100%; height: 100%; display: block; border: 0; }
+
+/* By default on mobile, show <object> and hide PDF.js canvases */
+@media (max-width: 768px) {
+  .pdf-wrap { display: block; }
+  .pdf-view { display: none; }
 }
 
-/* Make the embedded viewer fill the scroller */
-.pdf-wrap > object,
-.pdf-wrap > iframe,
-.pdf-wrap > embed {
-  width: 100%;
-  height: 100%;
-  border: 0;
-  display: block;
-  pointer-events: auto;
+/* When JS finishes rendering, flip to PDF.js canvases on mobile */
+@media (max-width: 768px) {
+  body.pdf-ready .pdf-wrap { display: none; }
+  body.pdf-ready .pdf-view { display: block; }
 }
+
+/* Canvas styling */
+.pdf-view canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.35);
+  background: #111;
+  border-radius: 6px;
+}
+
+
+
+
