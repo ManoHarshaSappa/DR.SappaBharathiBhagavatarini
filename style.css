@@ -1214,7 +1214,7 @@ b,
   border-radius: 999px;
   background: radial-gradient(circle, rgba(212, 175, 55, 0.12), transparent 68%);
   pointer-events: none;
-  filter: blur(18px);
+  filter: blur(8px);
 }
 
 .site-footer .container::after {
@@ -1258,9 +1258,29 @@ b,
   inset: -4% 8%;
   border-radius: 20px;
   background: radial-gradient(circle at center, rgba(212, 175, 55, 0.12), transparent 68%);
-  filter: blur(14px);
+  filter: blur(6px);
   pointer-events: none;
   z-index: 0;
+}
+
+/* Safari mobile stability: reduce expensive compositing at page end */
+@supports (-webkit-touch-callout: none) {
+  @media (max-width: 767px) {
+    .site-header {
+      backdrop-filter: none;
+    }
+
+    .site-footer .container {
+      box-shadow:
+        0 10px 22px rgba(0, 0, 0, 0.24),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.012);
+    }
+
+    .site-footer .container::before,
+    .social-footer-grid::before {
+      content: none;
+    }
+  }
 }
 
 .social-footer-grid > * {
