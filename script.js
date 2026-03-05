@@ -1,4 +1,3 @@
-const HEADER_SELECTOR = ".site-header";
 const INITIAL_RENDER_COUNT = 4;
 const RENDER_STEP = 4;
 
@@ -108,9 +107,21 @@ const SECTION_DATA = {
 
 const galleryState = {};
 
-function getHeaderOffset() {
-  const header = document.querySelector(HEADER_SELECTOR);
-  return header ? header.offsetHeight + 12 : 0;
+function setupScrollResetOnLoad() {
+  if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+  }
+
+  const resetToTop = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  };
+
+  if (window.location.hash) {
+    history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
+  }
+
+  resetToTop();
+  window.addEventListener("pageshow", resetToTop);
 }
 
 function setupMobileMenu() {
@@ -146,24 +157,60 @@ function setupMobileMenu() {
 }
 
 function setupSmoothScroll() {
-  const links = document.querySelectorAll('a[href^="#"]');
+  const links = document.querySelectorAll("a[href]");
 
   links.forEach((link) => {
     link.addEventListener("click", (event) => {
-      const targetId = link.getAttribute("href");
-      if (!targetId || targetId === "#") {
+      if (
+        event.defaultPrevented ||
+        event.button !== 0 ||
+        event.metaKey ||
+        event.ctrlKey ||
+        event.shiftKey ||
+        event.altKey
+      ) {
         return;
       }
 
-      const target = document.querySelector(targetId);
-      if (!target) {
+      const href = link.getAttribute("href");
+      if (
+        !href ||
+        href.startsWith("mailto:") ||
+        href.startsWith("tel:") ||
+        href.startsWith("javascript:")
+      ) {
         return;
       }
 
-      event.preventDefault();
-      const top = target.getBoundingClientRect().top + window.scrollY - getHeaderOffset();
-      window.scrollTo({ top, behavior: "smooth" });
-      history.replaceState(null, "", targetId);
+      if (link.target && link.target !== "_self") {
+        return;
+      }
+
+      let url;
+      try {
+        url = new URL(href, window.location.href);
+      } catch {
+        return;
+      }
+
+      if (url.origin !== window.location.origin) {
+        return;
+      }
+
+      const sameDocument =
+        url.pathname === window.location.pathname && url.search === window.location.search;
+
+      if (sameDocument) {
+        event.preventDefault();
+        history.replaceState(null, "", `${url.pathname}${url.search}`);
+        window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+        return;
+      }
+
+      if (url.hash) {
+        event.preventDefault();
+        window.location.href = `${url.pathname}${url.search}`;
+      }
     });
   });
 }
@@ -365,6 +412,7 @@ function setupCurrentPageIndicator() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  setupScrollResetOnLoad();
   setupCurrentPageIndicator();
   setupMobileMenu();
   setupSmoothScroll();
